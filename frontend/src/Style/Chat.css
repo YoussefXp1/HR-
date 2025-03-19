@@ -1,0 +1,158 @@
+:root {
+    --background: #ffffff;
+    --text-color: #333;
+    --sent-message: #007bff;
+    --received-message: #ececec;
+  }
+  
+  [data-theme="dark"] {
+    --background: #121212;
+    --text-color: #ffffff;
+    --sent-message: #0056b3;
+    --received-message: #444;
+  }
+  
+  .chat-container {
+    
+    width: 500px;
+    height: 500px;
+    border-radius: 15px;
+    display:flex;
+    flex-direction: column;
+    background-color: var(--background);
+    color: var(--text-color);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .chat-header {
+    padding: 15px 20px;
+    background: var(--sent-message);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .chat-header h4 {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+  
+  .theme-toggle-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .message-list {
+    flex: 1;
+    padding: 15px;
+    background-color: #f9f9f9;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    scroll-behavior: smooth;
+  }
+  
+  .message {
+    max-width: 70%;
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    position: relative;
+  }
+  
+  .message.sent {
+    background: var(--sent-message);
+    color: white;
+    align-self: flex-end;
+  }
+  
+  .message.sent:after {
+    content: "";
+    position: absolute;
+    right: -6px;
+    top: 12px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent var(--sent-message) transparent transparent;
+  }
+  
+  .message.received {
+    background: var(--received-message);
+    align-self: flex-start;
+    color: var(--text-color);
+  }
+  
+  .message.received:after {
+    content: "";
+    position: absolute;
+    left: -6px;
+    top: 12px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent transparent transparent var(--received-message);
+  }
+  
+  .message .timestamp {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.75rem;
+    color: #aaa;
+    text-align: right;
+  }
+  
+  .message:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transform: scale(1.02);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .message-input {
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #ccc;
+    background-color: #ffffff;
+  }
+  
+  .message-input input {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-size: 1rem;
+    outline: none;
+  }
+  
+  .message-input input:focus {
+    border-color: var(--sent-message);
+  }
+  
+  .message-input .attach-button {
+    margin-left: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  
+  .message-input button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    border: none;
+    background: linear-gradient(to right, var(--sent-message), var(--received-message));
+    color: white;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .message-input button:hover {
+    background: linear-gradient(to right, var(--received-message), var(--sent-message));
+  }
+  

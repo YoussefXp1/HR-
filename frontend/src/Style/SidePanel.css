@@ -1,0 +1,36 @@
+.side-panel {
+    width: 250px;
+    background-color: black;
+    color: #fff;
+    padding: 20px;
+    height: 151vh; /* Full viewport height */
+    overflow-y: auto; /* Enable scrolling if content overflows */
+  }
+  
+  .side-panel-title {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .side-panel-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .side-panel-link {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+  }
+  
+  .side-panel-link:hover {
+    background-color: #ffc107; /* Change background on hover */
+    color: #343a40;           /* Change text color on hover */
+    transform: scale(1.05);   /* Slightly enlarge the link */
+  }
+  

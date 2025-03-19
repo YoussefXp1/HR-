@@ -1,0 +1,179 @@
+/* Styling the sign-up container */
+.signup-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: var(--background);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Image container styling */
+.signup-image-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* Image styling */
+.signup-image {
+  width: 100px; /* Adjust the size of the image */
+  height: auto;
+  border-radius: 10px; /* Optional: if you want rounded corners for the image */
+}
+
+/* Header for the sign-up form */
+.signup-container h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  color: black;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Form styling */
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;  /* Adds space between form fields */
+}
+
+/* Form input fields */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+/* Input field styling */
+.form-group input {
+  padding: 12px 15px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  transition: border-color 0.3s ease;
+  background-color: #f9f9f9;
+}
+
+/* Style for password input field */
+#password {
+  font-family: "Arial", sans-serif; /* Ensuring password dots are readable */
+}
+
+/* Focus styles for input fields */
+.form-group input:focus {
+  border-color: var(--sent-message);
+  outline: none;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.6);
+}
+
+/* Button Styling */
+.submit-btn {
+  background-color: var(--sent-message);
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  font-weight: 600;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+}
+
+.submit-btn:active {
+  transform: translateY(1px);
+}
+
+/* Hover effects on form labels */
+.form-group label:hover {
+  color: var(--sent-message);
+  transition: color 0.3s ease;
+}
+
+/* Confirmation Box */
+.confirmation-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.confirmation-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 90%;
+}
+
+.check-icon {
+  font-size: 50px;
+  color: #ffc107; /* Green color on hover */
+  margin-bottom: 10px;
+}
+
+h3 {
+  margin: 20px 0;
+  font-size: 18px;
+}
+
+.close-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.close-btn:hover {
+  background-color: #0056b3;
+}
+
+.password-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-input-container input {
+  flex: 1;
+  padding-right: 40px; /* Space for the icon */
+}
+
+.eye-button {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #333;
+}
+

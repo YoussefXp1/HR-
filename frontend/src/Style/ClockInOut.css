@@ -1,0 +1,191 @@
+.clock-in-out-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .clock-in-out-container h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .digital-clock {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    background: #f4f4f4;
+    border-radius: 10px;
+    padding: 20px;
+    display: inline-block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .digital-clock .current-date {
+    font-size: 1.2rem;
+    color: #666;
+    margin-top: 5px;
+  }
+  
+  .status {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 20px 0;
+    transition: color 0.3s ease;
+  }
+  
+  .status.clocked-in {
+    color: #28a745; /* Green for clocked in */
+  }
+  
+  .status.clocked-out {
+    color: #dc3545; /* Red for clocked out */
+  }
+  
+  .buttons {
+    margin-top: 30px;
+  }
+  
+  .clock-in-btn, .clock-out-btn {
+    padding: 16px 32px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 180px;
+    margin: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .clock-in-btn {
+    background: linear-gradient(135deg, #28a745, #218838);
+    color: white;
+  }
+  
+  .clock-in-btn:hover {
+    background: linear-gradient(135deg, #218838, #28a745);
+    transform: scale(1.05);
+  }
+  
+  .clock-out-btn {
+    background: linear-gradient(135deg, #dc3545, #c82333);
+    color: white;
+  }
+  
+  .clock-out-btn:hover {
+    background: linear-gradient(135deg, #c82333, #dc3545);
+    transform: scale(1.05);
+  }
+  
+  .worked-hours {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  .clock-in-out-container .clock-in-btn:focus,
+  .clock-in-out-container .clock-out-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+  }
+  
+  .clock-in-out-container p {
+    margin: 10px 0;
+  }
+  
+  @media (max-width: 600px) {
+    .clock-in-out-container {
+      padding: 20px;
+      max-width: 90%;
+    }
+  
+    .clock-in-out-container h2 {
+      font-size: 1.8rem;
+    }
+  
+    .clock-in-btn, .clock-out-btn {
+      font-size: 1rem;
+      padding: 12px 24px;
+    }
+  
+    .worked-hours {
+      font-size: 1rem;
+    }
+  
+    .digital-clock {
+      font-size: 2.5rem;
+    }
+  
+    .digital-clock .current-date {
+      font-size: 1rem;
+    }
+  }
+  
+
+
+.clock-in-out-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.digital-clock {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  background: #f4f4f4;
+  border-radius: 10px;
+  padding: 20px;
+  display: inline-block;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.log {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.log h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.log ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.log li {
+  background-color: #f9f9f9;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.log li p {
+  margin: 5px 0;
+}
+
+.worked-hours {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: 600;
+}

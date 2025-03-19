@@ -1,0 +1,172 @@
+/* Container for the ViewProfile component */
+.view-profile-container {
+    text-align: center;
+    padding: 30px;
+    width: 950px;
+    margin: 0px auto;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Styling for the profile picture */
+  .profile-picture img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 3px solid #007bff;
+    transition: transform 0.3s ease;
+  }
+  
+  .profile-picture img:hover {
+    transform: scale(1.1); /* Slight zoom effect on image hover */
+  }
+  
+  /* Styling for the employee ID */
+  .employee-id {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #6c757d;
+    font-style: italic;
+    letter-spacing: 0.5px;
+  }
+  
+  /* Name section */
+  .name-section {
+    position: relative;
+    margin-bottom: 25px;
+  }
+  
+  /* Title styling */
+  .name-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align to the left */
+    color: black;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+  
+  /* Edit icon styling */
+  .edit-icon {
+    margin-left: 12px;
+    cursor: pointer;
+    color: #6c757d;
+    transition: color 0.3s ease;
+    font-size: 18px;
+  }
+  
+  .edit-icon.active {
+    color: #ffc107;
+  }
+  
+  .edit-icon:hover {
+    color: #0056b3; /* Darker blue on hover */
+  }
+  
+  /* Input field styling */
+  .name-input {
+    padding: 12px;
+    width: 100%;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    color: #333;
+    cursor: not-allowed;
+    transition: border 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .name-input.editable {
+    border: 1px solid #007bff;
+    background-color: white;
+    cursor: text;
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.3); /* Light blue shadow for focus */
+  }
+  
+  /* Focused state of input field */
+  .name-input:focus {
+    border-color: #0056b3;
+    outline: none;
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.5);
+  }
+  
+  /* Hover effect for edit icon */
+  .edit-icon:hover {
+    color: #0056b3;
+  }
+  
+  /* Work Experience section */
+  .work-experience-section {
+    margin-bottom: 20px;
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+  }
+  
+  /* Title styling for Work Experience */
+  .work-experience-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  /* Edit icon styling for Work Experience */
+  .work-experience-textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 14px;
+    line-height: 1.5;
+    border: 1px solid gray;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    color: #333;
+    height: 150px;
+    resize: none;
+    cursor: not-allowed;
+    transition: border 0.3s ease, background-color 0.3s ease;
+  }
+  
+  /* Editable Work Experience text area */
+  .work-experience-textarea.editable {
+    border: 1px solid #007bff;
+    background-color: white;
+    cursor: text;
+  }
+  
+  /* Hover effect for edit icon */
+  .edit-icon:hover {
+    color: #ffc107; /* Green color on hover */
+  }
+  
+  /* Save Changes Button */
+  .save-changes-button {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #28a745; /* Green button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  .save-changes-button:hover {
+    background-color: #ffc107; /* Darker green on hover */
+  }
+  
+  .save-changes-button:disabled {
+    background-color: #6c757d; /* Disabled state */
+    cursor: not-allowed;
+  }
+  

@@ -1,0 +1,97 @@
+/* Bell Icon Styles */
+.bell-icon {
+    font-size: 17px;
+    cursor: pointer;
+    position: relative;
+    color: #fff; /* Set the bell icon color to white */
+    transition: color 0.3s ease;
+    background: none;
+    border: none;
+  }
+  
+  .bell-icon:hover {
+    color: #007bff; /* Change color on hover (you can adjust this to match your theme) */
+  }
+  
+  /* Notification Dropdown Container */
+  .notification-container {
+    position: relative;
+  }
+  
+  /* Notification Dropdown Styles */
+  .notifications-dropdown {
+    position: absolute;
+    top: 35px; /* Adjust position relative to the bell icon */
+    right: 0;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    padding: 10px;
+    z-index: 10;
+    transform: translateY(10px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  .notifications-dropdown.show {
+    opacity: 1;
+    transform: translateY(0); /* Smooth slide-up effect */
+    pointer-events: all;
+  }
+  
+  /* Notification List Styling */
+  .notifications-dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .notifications-dropdown li {
+    padding: 12px;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .notifications-dropdown li:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .notifications-dropdown li:last-child {
+    border-bottom: none;
+  }
+  
+  /* Notification Title Styling */
+  .notification-title {
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  /* Notification Message Styling */
+  .notification-text {
+    color: #666;
+  }
+  
+  /* Notification Count Badge on Bell Icon */
+  .bell-icon::after {
+    content: attr(data-notifications); /* Use data attribute to display the notification count */
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #ffc107;
+    color: #fff;
+    font-size: 12px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  

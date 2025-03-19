@@ -1,0 +1,178 @@
+/* Header.css */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffc107;
+  }
+  
+  .navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar .nav-links a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+  }
+  
+  .navbar .nav-links a:hover {
+    color: #ffc107; /* Highlight color */
+  }
+
+  
+
+
+/* Intro.css */
+.intro {
+    text-align: center;
+    margin-bottom: 3rem;
+    background-image: url('./assets/banners.jpg'); /* Replace with the path to your image */
+    background-size: cover; /* Ensure the image covers the entire area */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repetition */
+    color: white; /* Adjust text color for readability */
+    padding: 3rem 2rem; /* Add padding to make the content stand out */
+    border-radius: 1px; /* Optional: Add rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Optional: Add a shadow for depth */
+    min-height: 400px;
+  }
+  
+  .intro h1 {
+    font-size: 3rem;
+    color: white;
+    padding-top: 45px;
+  }
+  
+  .intro p {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+  }
+  
+  
+  
+/* Features.css */
+.features {
+    text-align: center;
+    padding: 50px;
+    margin: 50px;
+  }
+  
+  .features h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: black;
+  }
+  
+  .feature-list {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    text-align: center; /*Center text */
+    background-color: #f9f9f9; /* Optional: background color */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: add shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth scaling and shadow transition */
+    min-height: 300px; /*Set the minimum height to ensure consistent box size */
+    
+
+
+  }
+  .feature-item:hover {
+    transform: scale(1.05); /* Slightly enlarge the box */
+    box-shadow: 1px 10px 15px #ffc107 
+    ; /* Add a stronger shadow on hover */
+  }
+  
+  .feature-image {
+    width: 268px; /* Adjust size as needed */
+    height: 216px;
+    object-fit: cover;
+    border-radius: 8px; /* Optional: rounded corners */
+    margin-bottom: 1rem; /* Space between the image and title */
+  }
+  
+  .feature-item h3 {
+    font-size: 1.5rem;
+    color: black;
+  }
+  
+  .feature-item p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  
+  
+
+  /* Footer.css */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: auto;
+  }
+  
+  .footer p {
+    margin: 0.5rem 0;
+  }
+  
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .footer-links a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+  }
+  
+  .footer-links a:hover {
+    color: #ffc107; /* Highlight color */
+  }
+  
+  .social-icons {
+    margin-top: 1rem;
+  }
+  
+  .social-icons a {
+    margin: 0 0.5rem;
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+  }
+  
+  .social-icons a:hover {
+    color: #ffc107; /* Highlight color */
+  }
+
+  
+  
+  
