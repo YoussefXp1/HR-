@@ -49,6 +49,8 @@ public class CompanyController : ControllerBase
                 CompanyAddress = request.CompanyAddress,
                 NumberOfEmployees = request.NumberOfEmployees,
                 CompanyIdentifier = Guid.NewGuid().ToString(),
+                PasswordHash = hashedPassword
+
             };
 
             await _context.Companies.AddAsync(company);
@@ -84,15 +86,17 @@ public class CompanyController : ControllerBase
             }
             catch (Exception emailEx)
             {
-                Console.WriteLine($"Failed to send email: {emailEx.Message}");
+                Console.WriteLine($"Failed to send email : {emailEx.Message}");
                 Console.WriteLine(emailEx.StackTrace);
-                return StatusCode(500, new
+                return StatusCode(500,new
                 {
                     message = "Company registered successfully, but failed to send verification email.",
                     companyId = company.Id,
                     hrId = hr.Id,
                     emailError = emailEx.Message
+
                 });
+                
             }
 
             return Ok(new
@@ -105,7 +109,7 @@ public class CompanyController : ControllerBase
         catch (Exception ex)
         {
             Console.WriteLine($" Registration Error: {ex.Message}");
-            return StatusCode(500, new
+            return StatusCode(500,new
             {
                 message = "Internal Server Error",
                 error = ex.Message,

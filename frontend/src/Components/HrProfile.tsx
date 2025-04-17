@@ -1,79 +1,110 @@
-import React, { useState } from "react";
-import { FaEdit } from "react-icons/fa"; // Font Awesome edit icon (requires react-icons)
-import "../style/Profile.css"; // Import CSS for styling
-import Image from '../assets/Hr-Image.png';
+import React, { useState, useEffect } from "react";
+import { FaEdit } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+import "../style/Profile.css";
+import Image from "../assets/Hr-Image.png";
 
 const HrProfile: React.FC = () => {
-  const [isEditingName, setIsEditingName] = useState(false); // State to toggle edit mode for name
-  const [isEditingEmail, setIsEditingEmail] = useState(false); // State to toggle edit mode for email
-  const [isEditingPhone, setIsEditingPhone] = useState(false); //State to toggle edit mode for phone number
-  const [isEditingExperience, setIsEditingExperience] = useState(false); // State for work experience edit toggle
+  const [isEditingName, setIsEditingName] = useState(false);
+  const [isEditingPhone, setIsEditingPhone] = useState(false);
 
-  const [fullName, setFullName] = useState("Chadi"); // State for the full name
-  const [email, setEmail] = useState("Chadi@example.com"); // State for the email
-  const [phoneNumber, setPhoneNumber] = useState("123-456-7890"); // State for the phone number
-  //const [workExperience, setWorkExperience] = useState("Previous work experience goes here..."); (NOTEE)
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [hrId, setHrId] = useState<number | null>(null);
+  const [position, setPosition] = useState("HR Manager");
+  const navigate = useNavigate();
 
-  const position = "HR Manager"; // Position is read-only
+  useEffect(() => {
+    const fetchHrProfile = async () => {
+      try {
+        const response = await fetch("http://localhost:5122/api/hr/profile", {
+          method: "GET",
+          credentials: "include",
+        });
 
-  // Toggle edit mode for full name
-  
+        if (!response.ok) {
+          throw new Error("Unauthorized. Please login again.");
+        }
 
-  // Toggle edit mode for email
-  const toggleEditEmail = () => {
-    setIsEditingEmail((prev) => !prev);
-  };
+        const data = await response.json();
+        setFullName(data.fullName || "");
+        setEmail(data.email);
+        setPhoneNumber(data.phoneNumber || "");
+        setPosition(data.position || "HR Manager");
+        setHrId(data.hrId);
+      } catch (error) {
+        console.error("Error fetching HR profile:", error);
+        alert("Unauthorized. Please login again.");
+        navigate("/login");
+      }
+    };
 
-  // Toggle edit mode for phone number
-  const toggleEditPhone = () => {
-    setIsEditingPhone((prev) => !prev);
-  };
+    fetchHrProfile();
+  }, [navigate]);
 
-  const toggleEditExperience = () => {
-    setIsEditingExperience((prev) => !prev);
-  };
-
-  // Update full name
   const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFullName(e.target.value);
   };
 
-  // Update email
-  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setEmail(e.target.value);
-  };
-
-  // Update phone number
   const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setPhoneNumber(e.target.value);
   };
 
-  //const handleExperienceChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    //setWorkExperience(e.target.value);
-  //};
+  const toggleEditName = () => {
+    setIsEditingName((prev) => !prev);
+  };
 
-  // Save changes function (for now just logging to the console)
-  const handleSaveChanges = () => {
-    console.log("Changes saved!");
+  const toggleEditPhone = () => {
+    setIsEditingPhone((prev) => !prev);
+  };
+
+  const handleSaveChanges = async () => {
+    if (!hrId) {
+      alert("HR ID not found!");
+      return;
+    }
+
+    try {
+      const response = await fetch(
+        `http://localhost:5122/api/hr/update-profile/${hrId}`,
+        {
+          method: "PUT",
+          credentials: "include",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            fullName,
+            phoneNumber,
+          }),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Failed to update profile.");
+      }
+
+      alert("Profile updated successfully!");
+      setIsEditingName(false);
+      setIsEditingPhone(false);
+    } catch (error) {
+      console.error("Error updating profile:", error);
+    }
   };
 
   return (
     <div className="view-profile-container">
-      {/* Employee Picture */}
       <div className="profile-picture">
-        <img
-          src={Image}
-          alt="Employee"
-        />
+        <img src={Image} alt="HR Profile" />
+        <p className="hr-id">ID: {hrId !== null ? hrId : "Loading.."}</p>
       </div>
-
-      {/* Employee ID */}
-      <p className="employee-id">ID: 12786</p> {/* Replace with dynamic ID */}
 
       {/* Full Name Section */}
       <div className="name-section">
         <h3 className="name-title">
           Full Name{" "}
+          <FaEdit className="edit-icon" onClick={toggleEditName} title="Edit" />
         </h3>
         <input
           type="text"
@@ -84,22 +115,14 @@ const HrProfile: React.FC = () => {
         />
       </div>
 
-      {/* Email Section */}
+      {/* Email Section (Read-only) */}
       <div className="name-section">
-        <h3 className="name-title">
-          Email{" "}
-          <FaEdit
-            className={`edit-icon ${isEditingEmail ? "active" : ""}`}
-            onClick={toggleEditEmail}
-            title="Edit"
-          />
-        </h3>
+        <h3 className="name-title">Email</h3>
         <input
           type="email"
           value={email}
-          onChange={handleEmailChange}
-          disabled={!isEditingEmail}
-          className={`name-input ${isEditingEmail ? "editable" : ""}`}
+          disabled
+          className="name-input read-only"
         />
       </div>
 
@@ -107,11 +130,7 @@ const HrProfile: React.FC = () => {
       <div className="name-section">
         <h3 className="name-title">
           Phone Number{" "}
-          <FaEdit
-            className={`edit-icon ${isEditingPhone ? "active" : ""}`}
-            onClick={toggleEditPhone}
-            title="Edit"
-          />
+          <FaEdit className="edit-icon" onClick={toggleEditPhone} title="Edit" />
         </h3>
         <input
           type="tel"
@@ -132,13 +151,12 @@ const HrProfile: React.FC = () => {
           className="name-input read-only"
         />
       </div>
-      
-    
+
       {/* Save Changes Button */}
       <button
         className="save-changes-button"
         onClick={handleSaveChanges}
-        disabled={!isEditingName && !isEditingEmail && !isEditingPhone && !isEditingExperience}
+        disabled={!isEditingName && !isEditingPhone}
       >
         Save Changes
       </button>

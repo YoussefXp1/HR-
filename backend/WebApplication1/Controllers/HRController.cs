@@ -1,9 +1,13 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.IdentityModel.Tokens.Jwt;
+using System.Net;
 using System.Threading.Tasks;
 using WebApplication1.Data;
 using WebApplication1.DTOs;
 using WebApplication1.Models;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
 
 [Route("api/hr")]
 [ApiController]
@@ -24,24 +28,39 @@ public class HRController : ControllerBase
     {
         var hr = await _context.HRs.FirstOrDefaultAsync(e => e.Email == request.Email);
         
-        if (hr == null)
+        if (hr == null || !VerifyPassword(request.Password, hr.PasswordHash))
         {
-            Console.WriteLine($"HR not found with email: {request.Email}");
             return Unauthorized(new { message = "Invalid email or password." });
         }
-
-        Console.WriteLine($"Stored Hash in DB: {hr.PasswordHash}");
-        Console.WriteLine($"Entered Password: {request.Password}");
-
-        if (!VerifyPassword(request.Password, hr.PasswordHash))
-        {
-            Console.WriteLine("Password verification failed.");
-            return Unauthorized(new { message = "Invalid email or password." });
-        }
-
-        return Ok(new { message = "Login Successful", hrId = hr.Id });
+        
+        return Ok(new 
+        { message = "Login Successful", 
+        hrId = hr.Id,
+        role ="HR",
+        });
     }
+    [Authorize(Roles = "HR")]
+    [HttpGet("profile")]
+    public async Task<IActionResult> GetHRProfile(int hrId, [FromHeader] string Authorization)
+    {
+        var identity = HttpContext.User.Identity as ClaimsIdentity;
+        var email = identity?.FindFirst(ClaimTypes.NameIdentifier)?.Value;
 
+        if(string.IsNullOrEmpty(email))
+            return Unauthorized(new{message = "Invaild token."});
+
+        var hr = await _context.HRs.FirstOrDefaultAsync(h => h.Email == email);
+        if (hr == null)
+            return NotFound(new {message ="HR Not Found"});
+
+        return Ok(new{
+            hrId = hr.Id,
+            fullName = hr.FullName,
+            email = hr.Email,
+            phoneNumber = hr.PhoneNumber,
+            position = "HR Manager" // Static for now
+        });
+    }
     //HR Updates Their Profile
     [HttpPut("update-profile/{hrId}")]
     public async Task<IActionResult> UpdateHRProfile(int hrId, [FromBody] HRUpdateDto request)

@@ -334,3 +334,4 @@ C:\Users\Youssef\Hr Horizon\backend\WebApplication1\bin\Debug\net9.0\runtimes\wi
 C:\Users\Youssef\Hr Horizon\backend\WebApplication1\bin\Debug\net9.0\BouncyCastle.Cryptography.dll
 C:\Users\Youssef\Hr Horizon\backend\WebApplication1\bin\Debug\net9.0\MailKit.dll
 C:\Users\Youssef\Hr Horizon\backend\WebApplication1\bin\Debug\net9.0\MimeKit.dll
+C:\Users\Youssef\Hr Horizon\backend\WebApplication1\obj\Debug\net9.0\WebApplication1.sourcelink.json

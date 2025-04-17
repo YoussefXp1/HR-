@@ -1,5 +1,5 @@
 using WebApplication1.Data;
-using WebApplication1.Services; // ✅ Add this for EmailService
+using WebApplication1.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
@@ -7,30 +7,33 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
-//1.Add Database Context
+// 1. Add Database Context
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-//2.Add CORS Policy
+// 2. Add CORS Policy
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowReactApp",
         policy =>
         {
-            policy.WithOrigins("http://localhost:5173") //React app URL
+            policy.WithOrigins("http://localhost:5173")
                   .AllowAnyHeader()
                   .AllowAnyMethod()
-                  .AllowCredentials(); //Allow credentials (important for authentication)
+                  .AllowCredentials()
+                  .SetIsOriginAllowed(_ => true); // Helps prevent CORS issues
         });
 });
 
-//3.Add Authentication & JWT Configuration
+// 3. Add Authentication & JWT Configuration
 var jwtKey = builder.Configuration["Jwt:Key"]
     ?? throw new InvalidOperationException("JWT Key is missing from configuration");
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
-    {
+    {   
+        options.RequireHttpsMetadata = true;
+        options.SaveToken = true;
         options.TokenValidationParameters = new TokenValidationParameters
         {
             ValidateIssuer = true,
@@ -43,32 +46,38 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         };
     });
 
-//4. Add Authorization
+// 4. Add Authorization
 builder.Services.AddAuthorization();
 
-//5 Add Email Service (Register EmailService)
+// 5. Add Email Service
 builder.Services.AddScoped<EmailService>();
 
-//6.Add Controllers & Swagger
+// 6. Add Controllers & Swagger
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// 7.Enable CORS (Place before authentication & authorization)
+// 7. Enable CORS (Place before authentication & authorization)
 app.UseCors("AllowReactApp");
 
-if (app.Environment.IsDevelopment())
+// Middleware to extract JWT from cookies and attach it to Authorization header
+app.Use(async (context, next) =>
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+    var token = context.Request.Cookies["jwt"];
+    if (!string.IsNullOrEmpty(token))
+    {
+        context.Request.Headers.Authorization = "Bearer " + token;
+    }
+    await next();
+});
 
-//8. Enable Authentication & Authorization Middleware
+// 8. Enable Authentication & Authorization Middleware
 app.UseHttpsRedirection();
-app.UseAuthentication(); //Authentication Middleware
-app.UseAuthorization();  // Authorization Middleware
+app.UseRouting();
+app.UseAuthentication();
+app.UseAuthorization();
 app.UseDeveloperExceptionPage();
 
 app.MapControllers();

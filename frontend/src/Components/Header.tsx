@@ -12,9 +12,18 @@ const Header: React.FC<HeaderProps> = ({ isLoggedIn, setIsLoggedIn }) => {
   const navigate = useNavigate();
   const [showModal, setShowModal] = useState(false); // State to control modal visibility
 
-  const handleLogout = () => {
-    setIsLoggedIn(false);
-    navigate("/"); // Redirect to homepage after logout
+  const handleLogout = async() => {
+    try {
+      await fetch("http://localhost:5122/api/auth/logout", {
+        method: "POST",
+        credentials: "include",
+      });
+      setIsLoggedIn(false);
+      navigate("/"); // Redirect to homepage after logout
+    } catch (error){
+      console.error("logout failed", error);
+    }
+    
   };
 
   const handleAboutClick = (e: React.MouseEvent) => {
@@ -33,9 +42,6 @@ const Header: React.FC<HeaderProps> = ({ isLoggedIn, setIsLoggedIn }) => {
         <ul className="nav-links">
           {isLoggedIn ? (
             <>
-              <li>
-                <Link to="/employee">Home</Link>
-              </li>
               <li>
                 <Link to="/" onClick={handleLogout}>
                   Log Out
@@ -57,7 +63,7 @@ const Header: React.FC<HeaderProps> = ({ isLoggedIn, setIsLoggedIn }) => {
                 <Link to="/login">Login</Link>
               </li>
               <li>
-                <Link to="/signup">Sign Up</Link>
+                <Link to="/signup">Sign up</Link>
               </li>
             </>
           )}

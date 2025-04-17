@@ -42,7 +42,6 @@ const SignUp: React.FC = () => {
         },
         body: JSON.stringify(formData),
       });
-
       if (!registerResponse.ok) {
         if (registerResponse.status === 409) {
           throw new Error("This business email is already registered. Try logging in.");
@@ -60,7 +59,19 @@ const SignUp: React.FC = () => {
       });
 
       if (!verifyResponse.ok) {
-        throw new Error("Failed to send verification email. Please try again later.");
+          const text = await verifyResponse.text(); // Read as plain text
+          console.error("Raw response:", text);
+    
+          let errorMessage = "Failed to send verification email, but registration succeeded.";
+          if(text){
+          try {
+                const errorData = JSON.parse(text); // Attempt to parse JSON
+                errorMessage = errorData.message || errorMessage;
+            } catch (error) {
+              console.error("Error parsing JSON:", error);
+            }
+          }
+        throw new Error(errorMessage);
       }
 
       setIsSubmitted(true);

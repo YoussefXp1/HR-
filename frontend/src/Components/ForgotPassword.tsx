@@ -1,12 +1,38 @@
 import React, { useState } from "react";
-import "../Style/ForgotPassword.css"
+import "../Style/ForgotPassword.css";
+
 const ForgotPassword: React.FC = () => {
   const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [error, setError] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Reset password for:", email);
-    // Add API call for password reset here
+    //setMessage("");
+    //setError("");
+
+    try {
+      const response = await fetch(
+        "http://localhost:5122/api/auth/forgot-password",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({email }),
+        }
+      );
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setMessage(data.message);
+      } else {
+        setError(data.message || "Something went wrong.");
+      }
+    } catch (error) {
+      setError("Failed to connect to the server.");
+    }
   };
 
   return (
@@ -23,6 +49,8 @@ const ForgotPassword: React.FC = () => {
         />
         <button type="submit">Reset Password</button>
       </form>
+      {message && <p className="success-message">{message}</p>}
+      {error && <p className="error-message">{error}</p>}
     </div>
   );
 };

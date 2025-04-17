@@ -14,13 +14,15 @@ namespace WebApplication1.Data // Ensure this matches your project
 
         public DbSet<HR> HRs { get; set; }
         public DbSet<EmailVerification> EmailVerifications { get; set; }
+        public DbSet<PasswordReset> PasswordResets { get; set; }
+
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Company>()
                 .HasIndex(c => c.CompanyIdentifier)
-                .IsUnique(); // Ensure Company ID is unique
+                .IsUnique(); //Ensure Company ID is unique
 
             modelBuilder.Entity<Employee>()
                 .HasIndex(e => e.EmployeeIdentifier)
