@@ -1,5 +1,5 @@
 public class LoginDTO
 {
-    public string? Identifier { get; set; } //Email for HR, Employee ID for Employees
+    public string? Email { get; set; } //Email for HR, Employee 
     public string? Password { get; set; }
 }

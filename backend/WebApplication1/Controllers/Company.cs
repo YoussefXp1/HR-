@@ -77,12 +77,13 @@ public class CompanyController : ControllerBase
             };
             await _context.EmailVerifications.AddAsync(emailVerification);
             await _context.SaveChangesAsync();
-
-            var verificationLink = $"{_configuration["AppUrl"]}/api/company/verify-email?token={token}";
+            
+            var verificationLink = $"{_configuration["FrontendUrl"]}/email-verified?token={token}";
+            await _emailService.SendVerificationEmail(request.BusinessEmail,verificationLink);
 
             try
             {
-                await _emailService.SendVerificationEmail(request.BusinessEmail, token);
+                await _emailService.SendVerificationEmail(request.BusinessEmail, verificationLink);
             }
             catch (Exception emailEx)
             {
@@ -147,29 +148,36 @@ public async Task<IActionResult> VerifyEmail(string token)
 
     Console.WriteLine($" Token found for email: {emailVerification.Email}");
 
+    //Verify The HR AND EMPLOYEE
     var hr = await _context.HRs.FirstOrDefaultAsync(h => h.Email == emailVerification.Email);
-    if (hr == null)
+    if (hr != null)
     {
-        Console.WriteLine(" HR not found.");
-        return NotFound(new { message = "HR not found." });
+        hr.IsEmailVerified = true;
+        _context.Entry(hr).State = EntityState.Modified;
+        await _context.SaveChangesAsync();
+    }
+    else
+    {
+        var employee = await _context.Employees.FirstOrDefaultAsync(e => e.Email == emailVerification.Email);
+        if (employee == null)
+        {
+            return NotFound(new {message = "User Not Found!"});
+        }
+        employee.IsEmailVerified = true;
+        _context.Entry(employee).State = EntityState.Modified;
+        await _context.SaveChangesAsync();
     }
 
-    Console.WriteLine($" HR found: {hr.Email}, Current IsEmailVerified: {hr.IsEmailVerified}");
-
-    //Update HR as verified
-    hr.IsEmailVerified = true;
-    _context.Entry(hr).State = EntityState.Modified;
-    await _context.SaveChangesAsync();
-
-    Console.WriteLine($" IsEmailVerified updated for {hr.Email}");
-
-    //Remove the token after successful verification
+     ///ADDED THIS INSTED
+    _ =Task.Run(async () =>
+    {
+    await Task.Delay(5000); // wait 5 seconds (non-blocking)
     _context.EmailVerifications.Remove(emailVerification);
     await _context.SaveChangesAsync();
-    Console.WriteLine(" Token removed from database.");
+    Console.WriteLine("Token removed after delay.");
+    });
 
-    return Redirect($"{_configuration["FrontendUrl"]}/email-verified");
-
+    return Ok(new{message = "Email verified successfully"});
 }
 
 

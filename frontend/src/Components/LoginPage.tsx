@@ -11,7 +11,7 @@ interface DecodedToken {
 }
 
 const LoginPage: React.FC<{ setIsLoggedIn: React.Dispatch<React.SetStateAction<boolean>> }> = ({ setIsLoggedIn }) => {
-  const [emailOrId, setEmailOrId] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
   const navigate = useNavigate();
@@ -24,7 +24,7 @@ const LoginPage: React.FC<{ setIsLoggedIn: React.Dispatch<React.SetStateAction<b
       const response = await fetch(endpoint, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ Identifier: emailOrId, Password: password }),
+        body: JSON.stringify({ Email: email.trim().toLowerCase(), Password: password }),
         credentials: "include", // this will allow cookies to be stored 
       });
       
@@ -86,8 +86,8 @@ const LoginPage: React.FC<{ setIsLoggedIn: React.Dispatch<React.SetStateAction<b
               id="emailOrId"
               name="emailOrId"
               placeholder="Enter your Email"
-              value={emailOrId}
-              onChange={(e) => setEmailOrId(e.target.value)}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               required
             />
           </div>

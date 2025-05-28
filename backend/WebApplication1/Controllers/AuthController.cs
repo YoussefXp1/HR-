@@ -59,8 +59,18 @@ namespace WebApplication1.Controllers
                 ClockSkew = TimeSpan.Zero
             }, out SecurityToken validatedToken);
 
-            Console.WriteLine("Token is vaild ✅");
-            return Ok (new {message = "User is authenticated"});
+            var identity = claimsPrincipal.Identity as ClaimsIdentity;
+            var role = identity?.FindFirst(ClaimTypes.Role)?.Value;
+            var idClaimType = role == "HR" ? "hrId" : "employeeId";
+            var id = identity?.FindFirst(idClaimType)?.Value;
+            if(string.IsNullOrEmpty(role) || string.IsNullOrEmpty(id))
+            {
+                return Unauthorized(new { message = "Token does not contain necessary information." });
+
+            }
+            Console.WriteLine("Token is vaild ✅ ROLE: {role}, ID:{id}");
+            return Ok (new {message = "User is authenticated", role, id});
+
         }
         catch (SecurityTokenException)
         {
@@ -79,7 +89,7 @@ namespace WebApplication1.Controllers
         {
             // Remove the JWT cookie
             Response.Cookies.Delete("jwt");
-            return Ok(new { message = "Logged out successfully." });
+            return Ok(new { message = "Logged out successfully."});
         }
 
 
@@ -87,11 +97,11 @@ namespace WebApplication1.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginDTO loginDTO)
         {
-            if (string.IsNullOrEmpty(loginDTO.Identifier) || string.IsNullOrEmpty(loginDTO.Password))
+            if (string.IsNullOrEmpty(loginDTO.Email) || string.IsNullOrEmpty(loginDTO.Password))
                 return BadRequest(new { message = "Invalid credentials." });
 
             // Check if the user is an HR
-            var hr = await _context.HRs.FirstOrDefaultAsync(h => h.Email == loginDTO.Identifier);
+            var hr = await _context.HRs.FirstOrDefaultAsync(h => h.Email == loginDTO.Email);
             if (hr != null)
             {
                 if (!BCrypt.Net.BCrypt.Verify(loginDTO.Password, hr.PasswordHash))
@@ -101,9 +111,9 @@ namespace WebApplication1.Controllers
                 if (!hr.IsEmailVerified)
                     return Unauthorized(new { message = "Email not verified. Please verify your email first." });
 
-                var token = GenerateJwtToken(hr.Id, hr.Email, "HR");
+                var token = GenerateJwtToken(hr.Id, hr.Email, "HR", hr.CompanyId);
                 Console.WriteLine("Generated HR Token: " + token);
-                //i added this now 
+                 
                 Response.Cookies.Append("jwt", token, new CookieOptions
                 {
                     HttpOnly= true,
@@ -115,25 +125,32 @@ namespace WebApplication1.Controllers
             }
 
             // Check if the user is an Employee
-            var employee = await _context.Employees.FirstOrDefaultAsync(e => e.EmployeeIdentifier == loginDTO.Identifier);
+            var employee = await _context.Employees.FirstOrDefaultAsync(e => e.Email == loginDTO.Email);
             if (employee != null)
             {
-                if (!BCrypt.Net.BCrypt.Verify(loginDTO.Password, employee.PasswordHash))
+                if (!BCrypt.Net.BCrypt.Verify(loginDTO.Password.Trim(), employee.PasswordHash))
                 {
                     return Unauthorized(new { message = "Invalid password." });
                 }
-                var token = GenerateJwtToken(employee.Id, employee.EmployeeIdentifier, "Employee");
-                // added this code now
+
+                // 🚫 Check if email is not verified
+                if (!employee.IsEmailVerified)
+                {
+                    return Unauthorized(new { message = "Email not verified. Please verify your email first." });
+                }
+
+                var token = GenerateJwtToken(employee.Id, employee.Email, "Employee", employee.CompanyId);
                 Response.Cookies.Append("jwt", token, new CookieOptions
                 {
-                    HttpOnly = true, // this will revent from benig accessed by javascript 
+                    HttpOnly = true,
                     Secure = false,
                     SameSite = SameSiteMode.Lax,
                     Expires = DateTime.UtcNow.AddHours(2)
                 });
 
-                return Ok(new {  Role = "Employee" }); // removed the token no need to return the token
+                return Ok(new { Role = "Employee" });
             }
+
 
             return Unauthorized(new { message = "User not found." });
         }
@@ -265,7 +282,7 @@ namespace WebApplication1.Controllers
         }
 
         //Generates JWT Token
-        private string GenerateJwtToken(int hrId, string identifier, string role)
+        private string GenerateJwtToken(int userId, string identifier, string role, int companyId)
         {
             
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"] ?? throw new InvalidOperationException("JWT Key is missing")));
@@ -276,11 +293,16 @@ namespace WebApplication1.Controllers
             var audience = _configuration["Jwt:Audience"] ?? throw new InvalidOperationException("JWT Audience is missing");
 
             var expirationTime = DateTime.UtcNow.AddHours(2);
+
+            var idClaimType = role =="HR" ? "hrId": "employeeId";
+
             var claims = new[]
             {
                 new Claim(JwtRegisteredClaimNames.Sub, identifier), // Store email or unique identifier here
                 new Claim(ClaimTypes.Role, role),
-                new Claim("hrId", hrId.ToString()), // HR ID claim
+                new Claim(idClaimType, userId.ToString()),
+                new Claim("companyId", companyId.ToString()) // Adding CompanyId claim
+ // HR ID claim
             };
 
             var token = new JwtSecurityToken(

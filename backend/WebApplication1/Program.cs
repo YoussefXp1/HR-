@@ -3,7 +3,9 @@ using WebApplication1.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using System.Security.Claims;
 using System.Text;
+using WebApplication1.Hubs;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -42,7 +44,8 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             ValidateIssuerSigningKey = true,
             ValidIssuer = builder.Configuration["Jwt:Issuer"],
             ValidAudience = builder.Configuration["Jwt:Audience"],
-            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey))
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey)),
+            RoleClaimType = ClaimTypes.Role,
         };
     });
 
@@ -54,6 +57,7 @@ builder.Services.AddScoped<EmailService>();
 
 // 6. Add Controllers & Swagger
 builder.Services.AddControllers();
+builder.Services.AddSignalR();  // Add this line
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -79,6 +83,10 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 app.UseDeveloperExceptionPage();
+app.UseStaticFiles();
+
 
 app.MapControllers();
+app.MapHub<ChatHub>("/chathub");
+
 app.Run();

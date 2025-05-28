@@ -28,7 +28,7 @@ const SidePanel: React.FC = () => {
           </Link>
         </li>
         <li>
-          <Link to="/employee/view-attendance" className="side-panel-link">
+          <Link to="/employee/my-attendance" className="side-panel-link">
             View Attendance
           </Link>
         </li>
@@ -42,11 +42,13 @@ const SidePanel: React.FC = () => {
             View Leaderboard
           </Link>
         </li>
+        {/*
         <li>
           <Link to="/employee/view-salary" className="side-panel-link">
             View Salary
           </Link>
         </li>
+        */}
         <li>
           <Link to="/employee/chat" className="side-panel-link">
             Chat

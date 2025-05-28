@@ -1,12 +1,2803 @@
 {
   "Version": 1,
-  "Hash": "SOwnQaRbYOGhWkmnAJKwdq79srT7hswqSxEp5hi48iY=",
+  "Hash": "cKu5O+AFBvqD0jgfuyaNNzcxT1h8KEzmju9kgikvakI=",
   "Source": "WebApplication1",
   "BasePath": "_content/WebApplication1",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "WebApplication1\\wwwroot",
+      "Source": "WebApplication1",
+      "ContentRoot": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/WebApplication1",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\event-images\\04cc76d6-a91c-499b-98d5-27275f9bf2eb.png",
+      "SourceId": "WebApplication1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/WebApplication1",
+      "RelativePath": "event-images/04cc76d6-a91c-499b-98d5-27275f9bf2eb#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "vi6d1xulhq",
+      "Integrity": "ubjFp33Fb23qof/mZmIg0bXn5O0iiRcdC4zqQHhVs0o=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\event-images\\04cc76d6-a91c-499b-98d5-27275f9bf2eb.png"
+    },
+    {
+      "Identity": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\event-images\\1d5d1a7f-83de-4028-bb70-7a1ef4a0060b.png",
+      "SourceId": "WebApplication1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/WebApplication1",
+      "RelativePath": "event-images/1d5d1a7f-83de-4028-bb70-7a1ef4a0060b#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "1luztupigl",
+      "Integrity": "lQrtOMUdj4FQdiun7qWU3ujnJhk7u7Z0CmTnpyv9CSk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\event-images\\1d5d1a7f-83de-4028-bb70-7a1ef4a0060b.png"
+    },
+    {
+      "Identity": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\event-images\\22a9a709-50f7-4a25-b9a3-e3d60f519e6f.png",
+      "SourceId": "WebApplication1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/WebApplication1",
+      "RelativePath": "event-images/22a9a709-50f7-4a25-b9a3-e3d60f519e6f#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "vi6d1xulhq",
+      "Integrity": "ubjFp33Fb23qof/mZmIg0bXn5O0iiRcdC4zqQHhVs0o=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\event-images\\22a9a709-50f7-4a25-b9a3-e3d60f519e6f.png"
+    },
+    {
+      "Identity": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\event-images\\35251cfc-8ef5-43ea-a37f-d814d481cd4a.png",
+      "SourceId": "WebApplication1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/WebApplication1",
+      "RelativePath": "event-images/35251cfc-8ef5-43ea-a37f-d814d481cd4a#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "cosixrgjch",
+      "Integrity": "VNF1daBKgFDKj5FvSB7tfilHef/U8XEBaW3u2XK60JY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\event-images\\35251cfc-8ef5-43ea-a37f-d814d481cd4a.png"
+    },
+    {
+      "Identity": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\event-images\\5262ec73-b982-4d0b-89bd-d585ce06161c.png",
+      "SourceId": "WebApplication1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/WebApplication1",
+      "RelativePath": "event-images/5262ec73-b982-4d0b-89bd-d585ce06161c#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "zl7j5q80xg",
+      "Integrity": "R/orAf+QLJleIo95qnIcLiCMiQDCMUrmRWzes3qj1b0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\event-images\\5262ec73-b982-4d0b-89bd-d585ce06161c.png"
+    },
+    {
+      "Identity": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\event-images\\55566916-a3d1-4ccb-ac9b-339edba225ba.png",
+      "SourceId": "WebApplication1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/WebApplication1",
+      "RelativePath": "event-images/55566916-a3d1-4ccb-ac9b-339edba225ba#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "zl7j5q80xg",
+      "Integrity": "R/orAf+QLJleIo95qnIcLiCMiQDCMUrmRWzes3qj1b0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\event-images\\55566916-a3d1-4ccb-ac9b-339edba225ba.png"
+    },
+    {
+      "Identity": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\event-images\\6da59555-4be8-4ee6-98fd-b0fe7f98249b.png",
+      "SourceId": "WebApplication1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/WebApplication1",
+      "RelativePath": "event-images/6da59555-4be8-4ee6-98fd-b0fe7f98249b#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "zl7j5q80xg",
+      "Integrity": "R/orAf+QLJleIo95qnIcLiCMiQDCMUrmRWzes3qj1b0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\event-images\\6da59555-4be8-4ee6-98fd-b0fe7f98249b.png"
+    },
+    {
+      "Identity": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\event-images\\6f05522b-3baf-4903-b90b-e4d631347a93.png",
+      "SourceId": "WebApplication1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/WebApplication1",
+      "RelativePath": "event-images/6f05522b-3baf-4903-b90b-e4d631347a93#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "zl7j5q80xg",
+      "Integrity": "R/orAf+QLJleIo95qnIcLiCMiQDCMUrmRWzes3qj1b0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\event-images\\6f05522b-3baf-4903-b90b-e4d631347a93.png"
+    },
+    {
+      "Identity": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\event-images\\77727c67-b31e-4eca-be83-224116fca931.png",
+      "SourceId": "WebApplication1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/WebApplication1",
+      "RelativePath": "event-images/77727c67-b31e-4eca-be83-224116fca931#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "zl7j5q80xg",
+      "Integrity": "R/orAf+QLJleIo95qnIcLiCMiQDCMUrmRWzes3qj1b0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\event-images\\77727c67-b31e-4eca-be83-224116fca931.png"
+    },
+    {
+      "Identity": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\event-images\\83bbd123-30db-4cf7-9b6f-611d4ae39b5d.png",
+      "SourceId": "WebApplication1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/WebApplication1",
+      "RelativePath": "event-images/83bbd123-30db-4cf7-9b6f-611d4ae39b5d#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ohm4jy6n42",
+      "Integrity": "JNr953lJEAavaT1p6fW4VEqrsGhPCe+TZA2ArI1rYuw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\event-images\\83bbd123-30db-4cf7-9b6f-611d4ae39b5d.png"
+    },
+    {
+      "Identity": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\event-images\\83edbbb1-2a62-435f-a7a4-698c90bc6b07.png",
+      "SourceId": "WebApplication1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/WebApplication1",
+      "RelativePath": "event-images/83edbbb1-2a62-435f-a7a4-698c90bc6b07#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ohm4jy6n42",
+      "Integrity": "JNr953lJEAavaT1p6fW4VEqrsGhPCe+TZA2ArI1rYuw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\event-images\\83edbbb1-2a62-435f-a7a4-698c90bc6b07.png"
+    },
+    {
+      "Identity": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\event-images\\980c892b-0821-4d85-8753-89da4475bc7a.png",
+      "SourceId": "WebApplication1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/WebApplication1",
+      "RelativePath": "event-images/980c892b-0821-4d85-8753-89da4475bc7a#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "1luztupigl",
+      "Integrity": "lQrtOMUdj4FQdiun7qWU3ujnJhk7u7Z0CmTnpyv9CSk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\event-images\\980c892b-0821-4d85-8753-89da4475bc7a.png"
+    },
+    {
+      "Identity": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\event-images\\9c65f936-440c-4932-a115-2c32de8b747a.png",
+      "SourceId": "WebApplication1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/WebApplication1",
+      "RelativePath": "event-images/9c65f936-440c-4932-a115-2c32de8b747a#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ohm4jy6n42",
+      "Integrity": "JNr953lJEAavaT1p6fW4VEqrsGhPCe+TZA2ArI1rYuw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\event-images\\9c65f936-440c-4932-a115-2c32de8b747a.png"
+    },
+    {
+      "Identity": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\event-images\\a50609ba-fe20-47b2-9b11-d325797fbdeb.png",
+      "SourceId": "WebApplication1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/WebApplication1",
+      "RelativePath": "event-images/a50609ba-fe20-47b2-9b11-d325797fbdeb#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "999k7uldn5",
+      "Integrity": "3ZrBwZp75gRjP4OT3l8EPWTbmCY9FxIXyivQwyVvCE0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\event-images\\a50609ba-fe20-47b2-9b11-d325797fbdeb.png"
+    },
+    {
+      "Identity": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\event-images\\ab8ade45-e33f-4fdc-a20b-ab8b1112d41a.png",
+      "SourceId": "WebApplication1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/WebApplication1",
+      "RelativePath": "event-images/ab8ade45-e33f-4fdc-a20b-ab8b1112d41a#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "vi6d1xulhq",
+      "Integrity": "ubjFp33Fb23qof/mZmIg0bXn5O0iiRcdC4zqQHhVs0o=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\event-images\\ab8ade45-e33f-4fdc-a20b-ab8b1112d41a.png"
+    },
+    {
+      "Identity": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\event-images\\ad6d12b2-f20e-456b-8e70-bf32049cb171.png",
+      "SourceId": "WebApplication1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/WebApplication1",
+      "RelativePath": "event-images/ad6d12b2-f20e-456b-8e70-bf32049cb171#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ohm4jy6n42",
+      "Integrity": "JNr953lJEAavaT1p6fW4VEqrsGhPCe+TZA2ArI1rYuw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\event-images\\ad6d12b2-f20e-456b-8e70-bf32049cb171.png"
+    },
+    {
+      "Identity": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\event-images\\db7f678a-3d02-4c26-8577-dbf7bb93e951.png",
+      "SourceId": "WebApplication1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/WebApplication1",
+      "RelativePath": "event-images/db7f678a-3d02-4c26-8577-dbf7bb93e951#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "nu90zof7ww",
+      "Integrity": "30RW3uhBWu5BKatVMlkEj4B+IFe0jKyMd6HsK6SQju4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\event-images\\db7f678a-3d02-4c26-8577-dbf7bb93e951.png"
+    },
+    {
+      "Identity": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\uploads\\employee_pictures\\56_359ecda3-81b0-4650-bce3-811914940ae8.png",
+      "SourceId": "WebApplication1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/WebApplication1",
+      "RelativePath": "uploads/employee_pictures/56_359ecda3-81b0-4650-bce3-811914940ae8#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "6ugd1oy6p3",
+      "Integrity": "fjddXyhiO2c/qB5zPp3JsCwWv9P6qnEUUdMWIWG/pyY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\employee_pictures\\56_359ecda3-81b0-4650-bce3-811914940ae8.png"
+    },
+    {
+      "Identity": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\uploads\\employee_pictures\\56_599c8900-653f-469a-b1a0-da4158d0675d.png",
+      "SourceId": "WebApplication1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/WebApplication1",
+      "RelativePath": "uploads/employee_pictures/56_599c8900-653f-469a-b1a0-da4158d0675d#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "6ugd1oy6p3",
+      "Integrity": "fjddXyhiO2c/qB5zPp3JsCwWv9P6qnEUUdMWIWG/pyY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\employee_pictures\\56_599c8900-653f-469a-b1a0-da4158d0675d.png"
+    },
+    {
+      "Identity": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\uploads\\employee_pictures\\56_62287a84-06ad-4970-9dfc-d3c0328b643f.png",
+      "SourceId": "WebApplication1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/WebApplication1",
+      "RelativePath": "uploads/employee_pictures/56_62287a84-06ad-4970-9dfc-d3c0328b643f#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "6ugd1oy6p3",
+      "Integrity": "fjddXyhiO2c/qB5zPp3JsCwWv9P6qnEUUdMWIWG/pyY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\employee_pictures\\56_62287a84-06ad-4970-9dfc-d3c0328b643f.png"
+    },
+    {
+      "Identity": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\uploads\\employee_pictures\\56_8fc10339-126e-4e5c-b3c4-5dbf251fe509.png",
+      "SourceId": "WebApplication1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/WebApplication1",
+      "RelativePath": "uploads/employee_pictures/56_8fc10339-126e-4e5c-b3c4-5dbf251fe509#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "1luztupigl",
+      "Integrity": "lQrtOMUdj4FQdiun7qWU3ujnJhk7u7Z0CmTnpyv9CSk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\employee_pictures\\56_8fc10339-126e-4e5c-b3c4-5dbf251fe509.png"
+    },
+    {
+      "Identity": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\uploads\\employee_pictures\\56_bdcaf312-090c-4449-9a49-5f4252759f7b.png",
+      "SourceId": "WebApplication1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/WebApplication1",
+      "RelativePath": "uploads/employee_pictures/56_bdcaf312-090c-4449-9a49-5f4252759f7b#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "6ugd1oy6p3",
+      "Integrity": "fjddXyhiO2c/qB5zPp3JsCwWv9P6qnEUUdMWIWG/pyY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\employee_pictures\\56_bdcaf312-090c-4449-9a49-5f4252759f7b.png"
+    },
+    {
+      "Identity": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\uploads\\employee_pictures\\56_dcd2f1c2-3062-4f12-829a-c30dc00630e5.png",
+      "SourceId": "WebApplication1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/WebApplication1",
+      "RelativePath": "uploads/employee_pictures/56_dcd2f1c2-3062-4f12-829a-c30dc00630e5#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "1luztupigl",
+      "Integrity": "lQrtOMUdj4FQdiun7qWU3ujnJhk7u7Z0CmTnpyv9CSk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\employee_pictures\\56_dcd2f1c2-3062-4f12-829a-c30dc00630e5.png"
+    },
+    {
+      "Identity": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\uploads\\employee_pictures\\57_1c72aa92-e704-4e4b-9e77-1a8885989826.png",
+      "SourceId": "WebApplication1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/WebApplication1",
+      "RelativePath": "uploads/employee_pictures/57_1c72aa92-e704-4e4b-9e77-1a8885989826#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "8592rcy3yb",
+      "Integrity": "zCVu7/rCjApgnCv4IJQ0KrRvAVqodOvYeNDt5zQsfVQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\employee_pictures\\57_1c72aa92-e704-4e4b-9e77-1a8885989826.png"
+    },
+    {
+      "Identity": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\uploads\\employee_pictures\\58_a043919e-7696-4946-b27b-47d2af9d1989.png",
+      "SourceId": "WebApplication1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/WebApplication1",
+      "RelativePath": "uploads/employee_pictures/58_a043919e-7696-4946-b27b-47d2af9d1989#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "8592rcy3yb",
+      "Integrity": "zCVu7/rCjApgnCv4IJQ0KrRvAVqodOvYeNDt5zQsfVQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\employee_pictures\\58_a043919e-7696-4946-b27b-47d2af9d1989.png"
+    },
+    {
+      "Identity": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\uploads\\employee_pictures\\59_1928cc83-7bce-4fe8-af03-fc4e11866064.png",
+      "SourceId": "WebApplication1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/WebApplication1",
+      "RelativePath": "uploads/employee_pictures/59_1928cc83-7bce-4fe8-af03-fc4e11866064#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "8592rcy3yb",
+      "Integrity": "zCVu7/rCjApgnCv4IJQ0KrRvAVqodOvYeNDt5zQsfVQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\employee_pictures\\59_1928cc83-7bce-4fe8-af03-fc4e11866064.png"
+    },
+    {
+      "Identity": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\uploads\\employee_pictures\\59_2632f09b-7e66-4746-8f8d-29da57c027e1.png",
+      "SourceId": "WebApplication1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/WebApplication1",
+      "RelativePath": "uploads/employee_pictures/59_2632f09b-7e66-4746-8f8d-29da57c027e1#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "6ugd1oy6p3",
+      "Integrity": "fjddXyhiO2c/qB5zPp3JsCwWv9P6qnEUUdMWIWG/pyY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\employee_pictures\\59_2632f09b-7e66-4746-8f8d-29da57c027e1.png"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "event-images/04cc76d6-a91c-499b-98d5-27275f9bf2eb.png",
+      "AssetFile": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\event-images\\04cc76d6-a91c-499b-98d5-27275f9bf2eb.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "174492"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ubjFp33Fb23qof/mZmIg0bXn5O0iiRcdC4zqQHhVs0o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 19 May 2025 08:20:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ubjFp33Fb23qof/mZmIg0bXn5O0iiRcdC4zqQHhVs0o="
+        }
+      ]
+    },
+    {
+      "Route": "event-images/04cc76d6-a91c-499b-98d5-27275f9bf2eb.vi6d1xulhq.png",
+      "AssetFile": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\event-images\\04cc76d6-a91c-499b-98d5-27275f9bf2eb.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "174492"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ubjFp33Fb23qof/mZmIg0bXn5O0iiRcdC4zqQHhVs0o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 19 May 2025 08:20:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vi6d1xulhq"
+        },
+        {
+          "Name": "label",
+          "Value": "event-images/04cc76d6-a91c-499b-98d5-27275f9bf2eb.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ubjFp33Fb23qof/mZmIg0bXn5O0iiRcdC4zqQHhVs0o="
+        }
+      ]
+    },
+    {
+      "Route": "event-images/1d5d1a7f-83de-4028-bb70-7a1ef4a0060b.1luztupigl.png",
+      "AssetFile": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\event-images\\1d5d1a7f-83de-4028-bb70-7a1ef4a0060b.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "73094"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"lQrtOMUdj4FQdiun7qWU3ujnJhk7u7Z0CmTnpyv9CSk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 20 May 2025 03:26:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1luztupigl"
+        },
+        {
+          "Name": "label",
+          "Value": "event-images/1d5d1a7f-83de-4028-bb70-7a1ef4a0060b.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-lQrtOMUdj4FQdiun7qWU3ujnJhk7u7Z0CmTnpyv9CSk="
+        }
+      ]
+    },
+    {
+      "Route": "event-images/1d5d1a7f-83de-4028-bb70-7a1ef4a0060b.png",
+      "AssetFile": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\event-images\\1d5d1a7f-83de-4028-bb70-7a1ef4a0060b.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "73094"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"lQrtOMUdj4FQdiun7qWU3ujnJhk7u7Z0CmTnpyv9CSk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 20 May 2025 03:26:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-lQrtOMUdj4FQdiun7qWU3ujnJhk7u7Z0CmTnpyv9CSk="
+        }
+      ]
+    },
+    {
+      "Route": "event-images/22a9a709-50f7-4a25-b9a3-e3d60f519e6f.png",
+      "AssetFile": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\event-images\\22a9a709-50f7-4a25-b9a3-e3d60f519e6f.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "174492"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ubjFp33Fb23qof/mZmIg0bXn5O0iiRcdC4zqQHhVs0o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 16 May 2025 18:36:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ubjFp33Fb23qof/mZmIg0bXn5O0iiRcdC4zqQHhVs0o="
+        }
+      ]
+    },
+    {
+      "Route": "event-images/22a9a709-50f7-4a25-b9a3-e3d60f519e6f.vi6d1xulhq.png",
+      "AssetFile": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\event-images\\22a9a709-50f7-4a25-b9a3-e3d60f519e6f.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "174492"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ubjFp33Fb23qof/mZmIg0bXn5O0iiRcdC4zqQHhVs0o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 16 May 2025 18:36:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vi6d1xulhq"
+        },
+        {
+          "Name": "label",
+          "Value": "event-images/22a9a709-50f7-4a25-b9a3-e3d60f519e6f.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ubjFp33Fb23qof/mZmIg0bXn5O0iiRcdC4zqQHhVs0o="
+        }
+      ]
+    },
+    {
+      "Route": "event-images/35251cfc-8ef5-43ea-a37f-d814d481cd4a.cosixrgjch.png",
+      "AssetFile": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\event-images\\35251cfc-8ef5-43ea-a37f-d814d481cd4a.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "790250"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VNF1daBKgFDKj5FvSB7tfilHef/U8XEBaW3u2XK60JY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 13:36:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "cosixrgjch"
+        },
+        {
+          "Name": "label",
+          "Value": "event-images/35251cfc-8ef5-43ea-a37f-d814d481cd4a.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-VNF1daBKgFDKj5FvSB7tfilHef/U8XEBaW3u2XK60JY="
+        }
+      ]
+    },
+    {
+      "Route": "event-images/35251cfc-8ef5-43ea-a37f-d814d481cd4a.png",
+      "AssetFile": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\event-images\\35251cfc-8ef5-43ea-a37f-d814d481cd4a.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "790250"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VNF1daBKgFDKj5FvSB7tfilHef/U8XEBaW3u2XK60JY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 13:36:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-VNF1daBKgFDKj5FvSB7tfilHef/U8XEBaW3u2XK60JY="
+        }
+      ]
+    },
+    {
+      "Route": "event-images/5262ec73-b982-4d0b-89bd-d585ce06161c.png",
+      "AssetFile": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\event-images\\5262ec73-b982-4d0b-89bd-d585ce06161c.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "34357"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"R/orAf+QLJleIo95qnIcLiCMiQDCMUrmRWzes3qj1b0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 22:39:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-R/orAf+QLJleIo95qnIcLiCMiQDCMUrmRWzes3qj1b0="
+        }
+      ]
+    },
+    {
+      "Route": "event-images/5262ec73-b982-4d0b-89bd-d585ce06161c.zl7j5q80xg.png",
+      "AssetFile": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\event-images\\5262ec73-b982-4d0b-89bd-d585ce06161c.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "34357"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"R/orAf+QLJleIo95qnIcLiCMiQDCMUrmRWzes3qj1b0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 22:39:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "zl7j5q80xg"
+        },
+        {
+          "Name": "label",
+          "Value": "event-images/5262ec73-b982-4d0b-89bd-d585ce06161c.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-R/orAf+QLJleIo95qnIcLiCMiQDCMUrmRWzes3qj1b0="
+        }
+      ]
+    },
+    {
+      "Route": "event-images/55566916-a3d1-4ccb-ac9b-339edba225ba.png",
+      "AssetFile": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\event-images\\55566916-a3d1-4ccb-ac9b-339edba225ba.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "34357"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"R/orAf+QLJleIo95qnIcLiCMiQDCMUrmRWzes3qj1b0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 13:16:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-R/orAf+QLJleIo95qnIcLiCMiQDCMUrmRWzes3qj1b0="
+        }
+      ]
+    },
+    {
+      "Route": "event-images/55566916-a3d1-4ccb-ac9b-339edba225ba.zl7j5q80xg.png",
+      "AssetFile": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\event-images\\55566916-a3d1-4ccb-ac9b-339edba225ba.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "34357"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"R/orAf+QLJleIo95qnIcLiCMiQDCMUrmRWzes3qj1b0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 13:16:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "zl7j5q80xg"
+        },
+        {
+          "Name": "label",
+          "Value": "event-images/55566916-a3d1-4ccb-ac9b-339edba225ba.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-R/orAf+QLJleIo95qnIcLiCMiQDCMUrmRWzes3qj1b0="
+        }
+      ]
+    },
+    {
+      "Route": "event-images/6da59555-4be8-4ee6-98fd-b0fe7f98249b.png",
+      "AssetFile": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\event-images\\6da59555-4be8-4ee6-98fd-b0fe7f98249b.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "34357"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"R/orAf+QLJleIo95qnIcLiCMiQDCMUrmRWzes3qj1b0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 13:28:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-R/orAf+QLJleIo95qnIcLiCMiQDCMUrmRWzes3qj1b0="
+        }
+      ]
+    },
+    {
+      "Route": "event-images/6da59555-4be8-4ee6-98fd-b0fe7f98249b.zl7j5q80xg.png",
+      "AssetFile": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\event-images\\6da59555-4be8-4ee6-98fd-b0fe7f98249b.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "34357"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"R/orAf+QLJleIo95qnIcLiCMiQDCMUrmRWzes3qj1b0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 13:28:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "zl7j5q80xg"
+        },
+        {
+          "Name": "label",
+          "Value": "event-images/6da59555-4be8-4ee6-98fd-b0fe7f98249b.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-R/orAf+QLJleIo95qnIcLiCMiQDCMUrmRWzes3qj1b0="
+        }
+      ]
+    },
+    {
+      "Route": "event-images/6f05522b-3baf-4903-b90b-e4d631347a93.png",
+      "AssetFile": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\event-images\\6f05522b-3baf-4903-b90b-e4d631347a93.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "34357"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"R/orAf+QLJleIo95qnIcLiCMiQDCMUrmRWzes3qj1b0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 13:34:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-R/orAf+QLJleIo95qnIcLiCMiQDCMUrmRWzes3qj1b0="
+        }
+      ]
+    },
+    {
+      "Route": "event-images/6f05522b-3baf-4903-b90b-e4d631347a93.zl7j5q80xg.png",
+      "AssetFile": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\event-images\\6f05522b-3baf-4903-b90b-e4d631347a93.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "34357"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"R/orAf+QLJleIo95qnIcLiCMiQDCMUrmRWzes3qj1b0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 13:34:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "zl7j5q80xg"
+        },
+        {
+          "Name": "label",
+          "Value": "event-images/6f05522b-3baf-4903-b90b-e4d631347a93.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-R/orAf+QLJleIo95qnIcLiCMiQDCMUrmRWzes3qj1b0="
+        }
+      ]
+    },
+    {
+      "Route": "event-images/77727c67-b31e-4eca-be83-224116fca931.png",
+      "AssetFile": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\event-images\\77727c67-b31e-4eca-be83-224116fca931.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "34357"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"R/orAf+QLJleIo95qnIcLiCMiQDCMUrmRWzes3qj1b0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 22:38:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-R/orAf+QLJleIo95qnIcLiCMiQDCMUrmRWzes3qj1b0="
+        }
+      ]
+    },
+    {
+      "Route": "event-images/77727c67-b31e-4eca-be83-224116fca931.zl7j5q80xg.png",
+      "AssetFile": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\event-images\\77727c67-b31e-4eca-be83-224116fca931.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "34357"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"R/orAf+QLJleIo95qnIcLiCMiQDCMUrmRWzes3qj1b0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 22:38:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "zl7j5q80xg"
+        },
+        {
+          "Name": "label",
+          "Value": "event-images/77727c67-b31e-4eca-be83-224116fca931.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-R/orAf+QLJleIo95qnIcLiCMiQDCMUrmRWzes3qj1b0="
+        }
+      ]
+    },
+    {
+      "Route": "event-images/83bbd123-30db-4cf7-9b6f-611d4ae39b5d.ohm4jy6n42.png",
+      "AssetFile": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\event-images\\83bbd123-30db-4cf7-9b6f-611d4ae39b5d.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "33762"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JNr953lJEAavaT1p6fW4VEqrsGhPCe+TZA2ArI1rYuw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 20 May 2025 19:46:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ohm4jy6n42"
+        },
+        {
+          "Name": "label",
+          "Value": "event-images/83bbd123-30db-4cf7-9b6f-611d4ae39b5d.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-JNr953lJEAavaT1p6fW4VEqrsGhPCe+TZA2ArI1rYuw="
+        }
+      ]
+    },
+    {
+      "Route": "event-images/83bbd123-30db-4cf7-9b6f-611d4ae39b5d.png",
+      "AssetFile": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\event-images\\83bbd123-30db-4cf7-9b6f-611d4ae39b5d.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "33762"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JNr953lJEAavaT1p6fW4VEqrsGhPCe+TZA2ArI1rYuw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 20 May 2025 19:46:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-JNr953lJEAavaT1p6fW4VEqrsGhPCe+TZA2ArI1rYuw="
+        }
+      ]
+    },
+    {
+      "Route": "event-images/83edbbb1-2a62-435f-a7a4-698c90bc6b07.ohm4jy6n42.png",
+      "AssetFile": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\event-images\\83edbbb1-2a62-435f-a7a4-698c90bc6b07.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "33762"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JNr953lJEAavaT1p6fW4VEqrsGhPCe+TZA2ArI1rYuw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 20 May 2025 19:46:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ohm4jy6n42"
+        },
+        {
+          "Name": "label",
+          "Value": "event-images/83edbbb1-2a62-435f-a7a4-698c90bc6b07.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-JNr953lJEAavaT1p6fW4VEqrsGhPCe+TZA2ArI1rYuw="
+        }
+      ]
+    },
+    {
+      "Route": "event-images/83edbbb1-2a62-435f-a7a4-698c90bc6b07.png",
+      "AssetFile": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\event-images\\83edbbb1-2a62-435f-a7a4-698c90bc6b07.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "33762"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JNr953lJEAavaT1p6fW4VEqrsGhPCe+TZA2ArI1rYuw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 20 May 2025 19:46:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-JNr953lJEAavaT1p6fW4VEqrsGhPCe+TZA2ArI1rYuw="
+        }
+      ]
+    },
+    {
+      "Route": "event-images/980c892b-0821-4d85-8753-89da4475bc7a.1luztupigl.png",
+      "AssetFile": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\event-images\\980c892b-0821-4d85-8753-89da4475bc7a.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "73094"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"lQrtOMUdj4FQdiun7qWU3ujnJhk7u7Z0CmTnpyv9CSk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 20 May 2025 03:29:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1luztupigl"
+        },
+        {
+          "Name": "label",
+          "Value": "event-images/980c892b-0821-4d85-8753-89da4475bc7a.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-lQrtOMUdj4FQdiun7qWU3ujnJhk7u7Z0CmTnpyv9CSk="
+        }
+      ]
+    },
+    {
+      "Route": "event-images/980c892b-0821-4d85-8753-89da4475bc7a.png",
+      "AssetFile": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\event-images\\980c892b-0821-4d85-8753-89da4475bc7a.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "73094"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"lQrtOMUdj4FQdiun7qWU3ujnJhk7u7Z0CmTnpyv9CSk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 20 May 2025 03:29:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-lQrtOMUdj4FQdiun7qWU3ujnJhk7u7Z0CmTnpyv9CSk="
+        }
+      ]
+    },
+    {
+      "Route": "event-images/9c65f936-440c-4932-a115-2c32de8b747a.ohm4jy6n42.png",
+      "AssetFile": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\event-images\\9c65f936-440c-4932-a115-2c32de8b747a.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "33762"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JNr953lJEAavaT1p6fW4VEqrsGhPCe+TZA2ArI1rYuw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 20 May 2025 19:47:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ohm4jy6n42"
+        },
+        {
+          "Name": "label",
+          "Value": "event-images/9c65f936-440c-4932-a115-2c32de8b747a.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-JNr953lJEAavaT1p6fW4VEqrsGhPCe+TZA2ArI1rYuw="
+        }
+      ]
+    },
+    {
+      "Route": "event-images/9c65f936-440c-4932-a115-2c32de8b747a.png",
+      "AssetFile": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\event-images\\9c65f936-440c-4932-a115-2c32de8b747a.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "33762"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JNr953lJEAavaT1p6fW4VEqrsGhPCe+TZA2ArI1rYuw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 20 May 2025 19:47:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-JNr953lJEAavaT1p6fW4VEqrsGhPCe+TZA2ArI1rYuw="
+        }
+      ]
+    },
+    {
+      "Route": "event-images/a50609ba-fe20-47b2-9b11-d325797fbdeb.999k7uldn5.png",
+      "AssetFile": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\event-images\\a50609ba-fe20-47b2-9b11-d325797fbdeb.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "759"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"3ZrBwZp75gRjP4OT3l8EPWTbmCY9FxIXyivQwyVvCE0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 12:55:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "999k7uldn5"
+        },
+        {
+          "Name": "label",
+          "Value": "event-images/a50609ba-fe20-47b2-9b11-d325797fbdeb.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-3ZrBwZp75gRjP4OT3l8EPWTbmCY9FxIXyivQwyVvCE0="
+        }
+      ]
+    },
+    {
+      "Route": "event-images/a50609ba-fe20-47b2-9b11-d325797fbdeb.png",
+      "AssetFile": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\event-images\\a50609ba-fe20-47b2-9b11-d325797fbdeb.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "759"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"3ZrBwZp75gRjP4OT3l8EPWTbmCY9FxIXyivQwyVvCE0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 12:55:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-3ZrBwZp75gRjP4OT3l8EPWTbmCY9FxIXyivQwyVvCE0="
+        }
+      ]
+    },
+    {
+      "Route": "event-images/ab8ade45-e33f-4fdc-a20b-ab8b1112d41a.png",
+      "AssetFile": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\event-images\\ab8ade45-e33f-4fdc-a20b-ab8b1112d41a.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "174492"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ubjFp33Fb23qof/mZmIg0bXn5O0iiRcdC4zqQHhVs0o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 09:11:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ubjFp33Fb23qof/mZmIg0bXn5O0iiRcdC4zqQHhVs0o="
+        }
+      ]
+    },
+    {
+      "Route": "event-images/ab8ade45-e33f-4fdc-a20b-ab8b1112d41a.vi6d1xulhq.png",
+      "AssetFile": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\event-images\\ab8ade45-e33f-4fdc-a20b-ab8b1112d41a.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "174492"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ubjFp33Fb23qof/mZmIg0bXn5O0iiRcdC4zqQHhVs0o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 09:11:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vi6d1xulhq"
+        },
+        {
+          "Name": "label",
+          "Value": "event-images/ab8ade45-e33f-4fdc-a20b-ab8b1112d41a.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ubjFp33Fb23qof/mZmIg0bXn5O0iiRcdC4zqQHhVs0o="
+        }
+      ]
+    },
+    {
+      "Route": "event-images/ad6d12b2-f20e-456b-8e70-bf32049cb171.ohm4jy6n42.png",
+      "AssetFile": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\event-images\\ad6d12b2-f20e-456b-8e70-bf32049cb171.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "33762"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JNr953lJEAavaT1p6fW4VEqrsGhPCe+TZA2ArI1rYuw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 21 May 2025 07:16:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ohm4jy6n42"
+        },
+        {
+          "Name": "label",
+          "Value": "event-images/ad6d12b2-f20e-456b-8e70-bf32049cb171.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-JNr953lJEAavaT1p6fW4VEqrsGhPCe+TZA2ArI1rYuw="
+        }
+      ]
+    },
+    {
+      "Route": "event-images/ad6d12b2-f20e-456b-8e70-bf32049cb171.png",
+      "AssetFile": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\event-images\\ad6d12b2-f20e-456b-8e70-bf32049cb171.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "33762"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JNr953lJEAavaT1p6fW4VEqrsGhPCe+TZA2ArI1rYuw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 21 May 2025 07:16:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-JNr953lJEAavaT1p6fW4VEqrsGhPCe+TZA2ArI1rYuw="
+        }
+      ]
+    },
+    {
+      "Route": "event-images/db7f678a-3d02-4c26-8577-dbf7bb93e951.nu90zof7ww.png",
+      "AssetFile": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\event-images\\db7f678a-3d02-4c26-8577-dbf7bb93e951.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1329550"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"30RW3uhBWu5BKatVMlkEj4B+IFe0jKyMd6HsK6SQju4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 15:11:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "nu90zof7ww"
+        },
+        {
+          "Name": "label",
+          "Value": "event-images/db7f678a-3d02-4c26-8577-dbf7bb93e951.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-30RW3uhBWu5BKatVMlkEj4B+IFe0jKyMd6HsK6SQju4="
+        }
+      ]
+    },
+    {
+      "Route": "event-images/db7f678a-3d02-4c26-8577-dbf7bb93e951.png",
+      "AssetFile": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\event-images\\db7f678a-3d02-4c26-8577-dbf7bb93e951.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1329550"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"30RW3uhBWu5BKatVMlkEj4B+IFe0jKyMd6HsK6SQju4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 15:11:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-30RW3uhBWu5BKatVMlkEj4B+IFe0jKyMd6HsK6SQju4="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/employee_pictures/56_359ecda3-81b0-4650-bce3-811914940ae8.6ugd1oy6p3.png",
+      "AssetFile": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\uploads\\employee_pictures\\56_359ecda3-81b0-4650-bce3-811914940ae8.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "31097"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"fjddXyhiO2c/qB5zPp3JsCwWv9P6qnEUUdMWIWG/pyY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 20 May 2025 02:27:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6ugd1oy6p3"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/employee_pictures/56_359ecda3-81b0-4650-bce3-811914940ae8.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-fjddXyhiO2c/qB5zPp3JsCwWv9P6qnEUUdMWIWG/pyY="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/employee_pictures/56_359ecda3-81b0-4650-bce3-811914940ae8.png",
+      "AssetFile": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\uploads\\employee_pictures\\56_359ecda3-81b0-4650-bce3-811914940ae8.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "31097"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"fjddXyhiO2c/qB5zPp3JsCwWv9P6qnEUUdMWIWG/pyY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 20 May 2025 02:27:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-fjddXyhiO2c/qB5zPp3JsCwWv9P6qnEUUdMWIWG/pyY="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/employee_pictures/56_599c8900-653f-469a-b1a0-da4158d0675d.6ugd1oy6p3.png",
+      "AssetFile": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\uploads\\employee_pictures\\56_599c8900-653f-469a-b1a0-da4158d0675d.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "31097"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"fjddXyhiO2c/qB5zPp3JsCwWv9P6qnEUUdMWIWG/pyY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 20 May 2025 01:49:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6ugd1oy6p3"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/employee_pictures/56_599c8900-653f-469a-b1a0-da4158d0675d.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-fjddXyhiO2c/qB5zPp3JsCwWv9P6qnEUUdMWIWG/pyY="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/employee_pictures/56_599c8900-653f-469a-b1a0-da4158d0675d.png",
+      "AssetFile": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\uploads\\employee_pictures\\56_599c8900-653f-469a-b1a0-da4158d0675d.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "31097"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"fjddXyhiO2c/qB5zPp3JsCwWv9P6qnEUUdMWIWG/pyY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 20 May 2025 01:49:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-fjddXyhiO2c/qB5zPp3JsCwWv9P6qnEUUdMWIWG/pyY="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/employee_pictures/56_62287a84-06ad-4970-9dfc-d3c0328b643f.6ugd1oy6p3.png",
+      "AssetFile": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\uploads\\employee_pictures\\56_62287a84-06ad-4970-9dfc-d3c0328b643f.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "31097"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"fjddXyhiO2c/qB5zPp3JsCwWv9P6qnEUUdMWIWG/pyY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 20 May 2025 01:53:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6ugd1oy6p3"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/employee_pictures/56_62287a84-06ad-4970-9dfc-d3c0328b643f.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-fjddXyhiO2c/qB5zPp3JsCwWv9P6qnEUUdMWIWG/pyY="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/employee_pictures/56_62287a84-06ad-4970-9dfc-d3c0328b643f.png",
+      "AssetFile": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\uploads\\employee_pictures\\56_62287a84-06ad-4970-9dfc-d3c0328b643f.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "31097"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"fjddXyhiO2c/qB5zPp3JsCwWv9P6qnEUUdMWIWG/pyY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 20 May 2025 01:53:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-fjddXyhiO2c/qB5zPp3JsCwWv9P6qnEUUdMWIWG/pyY="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/employee_pictures/56_8fc10339-126e-4e5c-b3c4-5dbf251fe509.1luztupigl.png",
+      "AssetFile": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\uploads\\employee_pictures\\56_8fc10339-126e-4e5c-b3c4-5dbf251fe509.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "73094"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"lQrtOMUdj4FQdiun7qWU3ujnJhk7u7Z0CmTnpyv9CSk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 20 May 2025 02:24:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1luztupigl"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/employee_pictures/56_8fc10339-126e-4e5c-b3c4-5dbf251fe509.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-lQrtOMUdj4FQdiun7qWU3ujnJhk7u7Z0CmTnpyv9CSk="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/employee_pictures/56_8fc10339-126e-4e5c-b3c4-5dbf251fe509.png",
+      "AssetFile": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\uploads\\employee_pictures\\56_8fc10339-126e-4e5c-b3c4-5dbf251fe509.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "73094"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"lQrtOMUdj4FQdiun7qWU3ujnJhk7u7Z0CmTnpyv9CSk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 20 May 2025 02:24:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-lQrtOMUdj4FQdiun7qWU3ujnJhk7u7Z0CmTnpyv9CSk="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/employee_pictures/56_bdcaf312-090c-4449-9a49-5f4252759f7b.6ugd1oy6p3.png",
+      "AssetFile": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\uploads\\employee_pictures\\56_bdcaf312-090c-4449-9a49-5f4252759f7b.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "31097"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"fjddXyhiO2c/qB5zPp3JsCwWv9P6qnEUUdMWIWG/pyY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 20 May 2025 04:36:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6ugd1oy6p3"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/employee_pictures/56_bdcaf312-090c-4449-9a49-5f4252759f7b.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-fjddXyhiO2c/qB5zPp3JsCwWv9P6qnEUUdMWIWG/pyY="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/employee_pictures/56_bdcaf312-090c-4449-9a49-5f4252759f7b.png",
+      "AssetFile": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\uploads\\employee_pictures\\56_bdcaf312-090c-4449-9a49-5f4252759f7b.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "31097"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"fjddXyhiO2c/qB5zPp3JsCwWv9P6qnEUUdMWIWG/pyY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 20 May 2025 04:36:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-fjddXyhiO2c/qB5zPp3JsCwWv9P6qnEUUdMWIWG/pyY="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/employee_pictures/56_dcd2f1c2-3062-4f12-829a-c30dc00630e5.1luztupigl.png",
+      "AssetFile": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\uploads\\employee_pictures\\56_dcd2f1c2-3062-4f12-829a-c30dc00630e5.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "73094"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"lQrtOMUdj4FQdiun7qWU3ujnJhk7u7Z0CmTnpyv9CSk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 20 May 2025 02:36:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1luztupigl"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/employee_pictures/56_dcd2f1c2-3062-4f12-829a-c30dc00630e5.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-lQrtOMUdj4FQdiun7qWU3ujnJhk7u7Z0CmTnpyv9CSk="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/employee_pictures/56_dcd2f1c2-3062-4f12-829a-c30dc00630e5.png",
+      "AssetFile": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\uploads\\employee_pictures\\56_dcd2f1c2-3062-4f12-829a-c30dc00630e5.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "73094"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"lQrtOMUdj4FQdiun7qWU3ujnJhk7u7Z0CmTnpyv9CSk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 20 May 2025 02:36:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-lQrtOMUdj4FQdiun7qWU3ujnJhk7u7Z0CmTnpyv9CSk="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/employee_pictures/57_1c72aa92-e704-4e4b-9e77-1a8885989826.8592rcy3yb.png",
+      "AssetFile": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\uploads\\employee_pictures\\57_1c72aa92-e704-4e4b-9e77-1a8885989826.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "511671"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zCVu7/rCjApgnCv4IJQ0KrRvAVqodOvYeNDt5zQsfVQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 20 May 2025 19:42:09 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8592rcy3yb"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/employee_pictures/57_1c72aa92-e704-4e4b-9e77-1a8885989826.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-zCVu7/rCjApgnCv4IJQ0KrRvAVqodOvYeNDt5zQsfVQ="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/employee_pictures/57_1c72aa92-e704-4e4b-9e77-1a8885989826.png",
+      "AssetFile": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\uploads\\employee_pictures\\57_1c72aa92-e704-4e4b-9e77-1a8885989826.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "511671"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zCVu7/rCjApgnCv4IJQ0KrRvAVqodOvYeNDt5zQsfVQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 20 May 2025 19:42:09 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-zCVu7/rCjApgnCv4IJQ0KrRvAVqodOvYeNDt5zQsfVQ="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/employee_pictures/58_a043919e-7696-4946-b27b-47d2af9d1989.8592rcy3yb.png",
+      "AssetFile": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\uploads\\employee_pictures\\58_a043919e-7696-4946-b27b-47d2af9d1989.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "511671"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zCVu7/rCjApgnCv4IJQ0KrRvAVqodOvYeNDt5zQsfVQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 21 May 2025 06:32:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8592rcy3yb"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/employee_pictures/58_a043919e-7696-4946-b27b-47d2af9d1989.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-zCVu7/rCjApgnCv4IJQ0KrRvAVqodOvYeNDt5zQsfVQ="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/employee_pictures/58_a043919e-7696-4946-b27b-47d2af9d1989.png",
+      "AssetFile": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\uploads\\employee_pictures\\58_a043919e-7696-4946-b27b-47d2af9d1989.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "511671"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zCVu7/rCjApgnCv4IJQ0KrRvAVqodOvYeNDt5zQsfVQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 21 May 2025 06:32:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-zCVu7/rCjApgnCv4IJQ0KrRvAVqodOvYeNDt5zQsfVQ="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/employee_pictures/59_1928cc83-7bce-4fe8-af03-fc4e11866064.8592rcy3yb.png",
+      "AssetFile": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\uploads\\employee_pictures\\59_1928cc83-7bce-4fe8-af03-fc4e11866064.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "511671"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zCVu7/rCjApgnCv4IJQ0KrRvAVqodOvYeNDt5zQsfVQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 21 May 2025 07:13:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8592rcy3yb"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/employee_pictures/59_1928cc83-7bce-4fe8-af03-fc4e11866064.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-zCVu7/rCjApgnCv4IJQ0KrRvAVqodOvYeNDt5zQsfVQ="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/employee_pictures/59_1928cc83-7bce-4fe8-af03-fc4e11866064.png",
+      "AssetFile": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\uploads\\employee_pictures\\59_1928cc83-7bce-4fe8-af03-fc4e11866064.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "511671"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zCVu7/rCjApgnCv4IJQ0KrRvAVqodOvYeNDt5zQsfVQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 21 May 2025 07:13:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-zCVu7/rCjApgnCv4IJQ0KrRvAVqodOvYeNDt5zQsfVQ="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/employee_pictures/59_2632f09b-7e66-4746-8f8d-29da57c027e1.6ugd1oy6p3.png",
+      "AssetFile": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\uploads\\employee_pictures\\59_2632f09b-7e66-4746-8f8d-29da57c027e1.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "31097"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"fjddXyhiO2c/qB5zPp3JsCwWv9P6qnEUUdMWIWG/pyY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 28 May 2025 20:14:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6ugd1oy6p3"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/employee_pictures/59_2632f09b-7e66-4746-8f8d-29da57c027e1.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-fjddXyhiO2c/qB5zPp3JsCwWv9P6qnEUUdMWIWG/pyY="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/employee_pictures/59_2632f09b-7e66-4746-8f8d-29da57c027e1.png",
+      "AssetFile": "C:\\Users\\Youssef\\Hr Horizon\\backend\\WebApplication1\\wwwroot\\uploads\\employee_pictures\\59_2632f09b-7e66-4746-8f8d-29da57c027e1.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "31097"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"fjddXyhiO2c/qB5zPp3JsCwWv9P6qnEUUdMWIWG/pyY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 28 May 2025 20:14:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-fjddXyhiO2c/qB5zPp3JsCwWv9P6qnEUUdMWIWG/pyY="
+        }
+      ]
+    }
+  ]
 }

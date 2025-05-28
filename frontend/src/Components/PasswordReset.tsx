@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import { useSearchParams } from "react-router-dom";
-import "../Style/PasswordReset.css"
+import { useNavigate, useSearchParams } from "react-router-dom";
+import "../Style/PasswordReset.css";
 
 const PasswordReset: React.FC = () => {
-
-  // Extract token from URL
   const [searchParams] = useSearchParams();
   const token = searchParams.get("token");
 
@@ -21,6 +18,11 @@ const PasswordReset: React.FC = () => {
     }
   }, [token]);
 
+  const isPasswordStrong = (password: string): boolean => {
+    const strongPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d|.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;
+    return strongPasswordRegex.test(password);
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setMessage("");
@@ -28,6 +30,11 @@ const PasswordReset: React.FC = () => {
 
     if (newPassword !== confirmPassword) {
       setError("Passwords do not match.");
+      return;
+    }
+
+    if (!isPasswordStrong(newPassword)) {
+      setError("Password must be at least 8 characters long, include at least one uppercase letter, one lowercase letter, and one number or special character.");
       return;
     }
 
@@ -44,11 +51,16 @@ const PasswordReset: React.FC = () => {
 
       if (response.ok) {
         setMessage("Password reset successfully! Redirecting to login...");
-        setTimeout(() => navigate("/login"), 2000);
+        setTimeout(() => {
+          window.close();
+          setTimeout(() => {
+            navigate("/login");
+          }, 1000);
+        }, 3000);
       } else {
         setError(data.message || "Something went wrong.");
       }
-    } catch (error) {
+    } catch {
       setError("Failed to connect to the server.");
     }
   };
@@ -57,8 +69,10 @@ const PasswordReset: React.FC = () => {
     <div className="reset-password-container">
       <h2>Reset Password</h2>
       <p>Enter your new password below.</p>
+
       {error && <p className="error-message">{error}</p>}
       {message && <p className="success-message">{message}</p>}
+
       <form onSubmit={handleSubmit}>
         <input
           type="password"
@@ -67,6 +81,12 @@ const PasswordReset: React.FC = () => {
           onChange={(e) => setNewPassword(e.target.value)}
           required
         />
+        {newPassword && !isPasswordStrong(newPassword) && (
+          <p style={{ color: "red", fontSize: "0.85rem" }}>
+            Password must have 8+ characters, one uppercase, one lowercase, and one number or special character.
+          </p>
+        )}
+
         <input
           type="password"
           placeholder="Confirm Password"

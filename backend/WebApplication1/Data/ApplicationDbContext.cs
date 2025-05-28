@@ -16,17 +16,38 @@ namespace WebApplication1.Data // Ensure this matches your project
         public DbSet<EmailVerification> EmailVerifications { get; set; }
         public DbSet<PasswordReset> PasswordResets { get; set; }
 
+        public DbSet<DocumentRequest> DocumentRequests  { get; set; }
+        public DbSet<CompanyEvent> Events  { get; set; }
+
+        public DbSet<AttendanceLog> AttendanceLogs { get; set; }
+
+        public DbSet<LeaveRequest> LeaveRequests  { get; set; }
+
+        public DbSet<Message> Messages  { get; set; }
+
+
+
+
+
+
+
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            // Turn off cascade delete globally
+            foreach (var foreignKey in modelBuilder.Model.GetEntityTypes()
+                    .SelectMany(e => e.GetForeignKeys()))
+            {
+                foreignKey.DeleteBehavior = DeleteBehavior.Restrict;
+            }
+
+
             modelBuilder.Entity<Company>()
                 .HasIndex(c => c.CompanyIdentifier)
                 .IsUnique(); //Ensure Company ID is unique
 
-            modelBuilder.Entity<Employee>()
-                .HasIndex(e => e.EmployeeIdentifier)
-                .IsUnique(); // Ensure Employee ID is unique
+            
 
             modelBuilder.Entity<Company>()
                 .HasIndex(c => c.BusinessEmail)

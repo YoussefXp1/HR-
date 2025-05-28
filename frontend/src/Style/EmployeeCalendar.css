@@ -1,0 +1,58 @@
+.employee-calendar-container {
+  max-width: 700px;
+  margin: 30px auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.calendar-day {
+  text-align: center;
+  padding: 0.8rem;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: default;
+}
+
+.clocked-in {
+  background-color: #e6f4ea;
+  color: #2e7d32;
+  border: 1px solid #a5d6a7;
+}
+
+.not-clocked-in {
+  background-color: #f0f0f0;
+  color: #9e9e9e;
+}
+
+.today-log {
+  background: #f9f9ff;
+  border-left: 4px solid #3f51b5;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.today-log h3 {
+  margin-bottom: 0.5rem;
+  color: #3f51b5;
+}
+
+.today-log p {
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+}

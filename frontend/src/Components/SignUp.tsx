@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom"; //Redirect after signup
+import { useNavigate } from "react-router-dom";
 import "../style/SignUp.css";
 import Image from "../assets/challenging-logo1.png";
 import WhySignU from "../Components/WhySignUp";
-import { FaEye, FaEyeSlash } from "react-icons/fa"; //Importing icons(password eye)
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const SignUp: React.FC = () => {
-  const navigate = useNavigate(); //React Router for navigation
+  const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     businessEmail: "",
@@ -17,8 +17,8 @@ const SignUp: React.FC = () => {
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [error, setError] = useState<string | null>(null); //Store errors
-  const [showPassword, setShowPassword] = useState(false); //Toggling on and off password visibility
+  const [error, setError] = useState<string | null>(null);
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -29,12 +29,23 @@ const SignUp: React.FC = () => {
     setShowPassword((prev) => !prev);
   };
 
+  const isPasswordStrong = (password: string): boolean => {
+    const strongPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d|.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;
+    return strongPasswordRegex.test(password);
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError(null);
 
+    if (!isPasswordStrong(formData.password)) {
+      setError(
+        "Password must be at least 8 characters long, include at least one uppercase letter, one lowercase letter, and one number or special character."
+      );
+      return;
+    }
+
     try {
-      //This code will Register the company
       const registerResponse = await fetch("http://localhost:5122/api/company/register", {
         method: "POST",
         headers: {
@@ -42,6 +53,7 @@ const SignUp: React.FC = () => {
         },
         body: JSON.stringify(formData),
       });
+
       if (!registerResponse.ok) {
         if (registerResponse.status === 409) {
           throw new Error("This business email is already registered. Try logging in.");
@@ -49,35 +61,10 @@ const SignUp: React.FC = () => {
         throw new Error(`Registration failed! Status: ${registerResponse.status}`);
       }
 
-      // Step 2: Send verification email
-      const verifyResponse = await fetch("http://localhost:5122/api/company/verify-email", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email: formData.businessEmail }),
-      });
-
-      if (!verifyResponse.ok) {
-          const text = await verifyResponse.text(); // Read as plain text
-          console.error("Raw response:", text);
-    
-          let errorMessage = "Failed to send verification email, but registration succeeded.";
-          if(text){
-          try {
-                const errorData = JSON.parse(text); // Attempt to parse JSON
-                errorMessage = errorData.message || errorMessage;
-            } catch (error) {
-              console.error("Error parsing JSON:", error);
-            }
-          }
-        throw new Error(errorMessage);
-      }
-
       setIsSubmitted(true);
       setTimeout(() => {
-        navigate("/login"); //Redirect the user to the LoginPage after successful signup
-      }, 2000);
+        navigate("/login");
+      }, 4000);
     } catch (err: any) {
       setError(err.message);
     }
@@ -91,7 +78,7 @@ const SignUp: React.FC = () => {
         </div>
         <h2>Sign Up</h2>
 
-        {error && <p className="error-message">{error}</p>} {/* Show errors */}
+        {error && <p className="error-message">{error}</p>}
 
         <form onSubmit={handleSubmit} className="signup-form">
           <div className="form-group">
@@ -116,12 +103,16 @@ const SignUp: React.FC = () => {
                 value={formData.password}
                 onChange={handleChange}
                 required
-                minLength={8} //Ensure The password is at least 8 characters
               />
               <button type="button" onClick={togglePasswordVisibility} className="eye-button">
                 {showPassword ? <FaEyeSlash /> : <FaEye />}
               </button>
             </div>
+            {formData.password && !isPasswordStrong(formData.password) && (
+              <p style={{ color: "red", fontSize: "0.85rem" }}>
+                Password must have 8+ characters, one uppercase, one lowercase, and one number or special character.
+              </p>
+            )}
           </div>
 
           <div className="form-group">
@@ -162,6 +153,12 @@ const SignUp: React.FC = () => {
 
           <button type="submit" className="submit-btn">Sign Up</button>
         </form>
+
+        {isSubmitted && (
+          <div className="success-message" style={{ color: "green", marginTop: "1rem", textAlign: "center" }}>
+            Company registered successfully! Please check your email to verify. Redirecting to login...
+          </div>
+        )}
       </div>
       <WhySignU />
     </>

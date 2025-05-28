@@ -10,8 +10,8 @@ import Chat from "./Chat";
 import RequestLeave from "./RequestLeave";
 import RequestDocuments from "./RequestDocuments";
 import AddModifyEmployee from "./AddEmployee";
-
-
+import PostEvent from "./PostEvents";
+import ViewLeaveRequests from "./ViewLeaveRequest";
 
 const HrPage: React.FC = () => {
   return (
@@ -25,9 +25,10 @@ const HrPage: React.FC = () => {
           <Route path="profile" element={<HrProfile />} />
           <Route path="request-documents" element={<RequestDocuments />} />
           <Route path="add-modify" element={<AddModifyEmployee />} />
+          <Route path="post-events" element={<PostEvent />} />
           <Route path="clock-in-out" element={<ClockInOut />} />
           <Route path="view-attendance" element={<ViewAttendance />} />
-          <Route path="request-leave-vacation" element={<RequestLeave />} />
+          <Route path="View-leave-vacation-requests" element={<ViewLeaveRequests />} />
           <Route path="view-leaderboard" element={<ViewLeaderboard />} />
           <Route path="view-salary" element={<ViewSalary />} />
           <Route path="chat" element={<Chat />} />

@@ -1,91 +1,162 @@
 /* Container styling */
 .employee-form-container {
-    background-color: #f9f9f9;
-    padding: 30px;
-    max-width: 600px;
-    margin: 50px auto;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    font-family: 'Arial', sans-serif;
-  }
-  
-  /* Header styling */
-  .employee-form-header {
-    text-align: center;
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
-  /* Toggle button styling */
-  .employee-form-toggle {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  .employee-form-toggle:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Form styling */
-  .employee-form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .employee-form-group {
-    margin-bottom: 15px;
-  }
-  
-  label {
-    font-weight: bold;
-    margin-bottom: 5px;
-    display: block;
-    color: #555;
-  }
-  
-  input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 14px;
-  }
-  
-  input:disabled {
-    background-color: #f2f2f2;
-  }
-  
-  /* Submit button styling */
-  .employee-form-submit {
-    padding: 10px 20px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  .employee-form-submit:hover {
-    background-color: #218838;
-  }
-  
-  /* Message styling */
-  .employee-form-message {
-    margin-top: 20px;
-    padding: 10px;
-    border: 1px solid #d4edda;
-    background-color: #d4edda;
-    color: #155724;
-    border-radius: 5px;
-    text-align: center;
-  }
-  
+  background-color: #f9f9f9;
+  padding: 30px;
+  max-width: 600px;
+  margin: 50px auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+}
+
+/* Header styling */
+.employee-form-header {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Toggle button styling */
+.employee-form-toggle {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.employee-form-toggle:hover {
+  background-color: #0056b3;
+}
+
+/* Form styling */
+.employee-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.employee-form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+  color: #555;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+input:disabled {
+  background-color: #f2f2f2;
+}
+
+/* Submit button styling */
+.employee-form-submit {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.employee-form-submit:hover {
+  background-color: #218838;
+}
+
+/* Message styling */
+.employee-form-message {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #d4edda;
+  background-color: #d4edda;
+  color: #155724;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* New Button Styles for Add, Modify, and Delete */
+
+/* Add Employee Button */
+.employee-form-button.add {
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 0;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.employee-form-button.add:hover {
+  background-color: #0056b3;
+}
+
+/* Modify Employee Button */
+.employee-form-button.modify {
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: #ffc107;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 0;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.employee-form-button.modify:hover {
+  background-color: #e0a800;
+}
+
+/* Delete Employee Button */
+.employee-form-button.delete {
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 0;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.employee-form-button.delete:hover {
+  background-color: #c82333;
+}
+
+.employee-form-toggle-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Space between buttons */
+  margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+

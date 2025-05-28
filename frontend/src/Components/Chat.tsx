@@ -1,121 +1,220 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import EmojiPicker, { EmojiClickData } from "emoji-picker-react";
+import axios from "axios";
 import "../style/Chat.css";
+import "../Style/ChatBar.css"
 
-const ChatComponent = () => {
-  const [messages, setMessages] = useState<
-    { text: string; type: "sent" | "received"; timestamp: string }[]
-  >([]);
+interface Employee {
+  id: number;
+  fullName: string;
+  profilePictureUrl?: string;
+  position:string; // optional in case some employees don't have one
+
+}
+
+interface Message {
+  id: number;
+  senderId: number;
+  receiverId: number;
+  content: string;
+  timestamp: string;
+  senderRole: string;
+}
+
+const HRChat = () => {
+  const [employees, setEmployees] = useState<Employee[]>([]);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedEmployee, setSelectedEmployee] = useState<Employee | null>(null);
+  const [messages, setMessages] = useState<Message[]>([]);
   const [newMessage, setNewMessage] = useState("");
-  const [theme, setTheme] = useState<"light" | "dark">("light");
   const [showEmojiPicker, setShowEmojiPicker] = useState(false);
   const messageListRef = useRef<HTMLDivElement>(null);
+  const pollingRef = useRef<NodeJS.Timeout | null>(null); // For clearing interval
 
   useEffect(() => {
+    
+
     if (messageListRef.current) {
       messageListRef.current.scrollTop = messageListRef.current.scrollHeight;
     }
   }, [messages]);
 
-  const handleSendMessage = () => {
-    if (newMessage.trim() === "") return;
+  
 
-    const timestamp = new Date().toLocaleString();
+  useEffect(() => {
+    const fetchEmployees = async () => {
+      try {
+        const res = await axios.get(
+          `http://localhost:5122/api/chat/search-employees?query=${searchTerm}`,
+          { withCredentials: true }
+        );
+        setEmployees(res.data);
+      } catch (error) {
+        console.error("Failed to fetch employees:", error);
+      }
+    };
 
-    // Add the user's message immediately
-    setMessages([
-      ...messages,
-      { text: newMessage, type: "sent", timestamp },
-      { text: "HR is writing...", type: "received", timestamp },
-    ]);
-    setNewMessage("");
+    fetchEmployees();
+  }, [searchTerm]);
 
-    // Simulate HR response after a delay
-    setTimeout(() => {
-      setMessages((prevMessages) =>
-        prevMessages.map((msg, index) =>
-          index === prevMessages.length - 1
-            ? { ...msg, text: "I will text you as soon as I can" } // Update the "HR is writing..." message
-            : msg
-        )
+    const fetchMessages = useCallback(async () => {
+    if (!selectedEmployee) return;
+    try {
+      const res = await axios.get(
+        `http://localhost:5122/api/chat/conversations/${selectedEmployee.id}`,
+        { withCredentials: true }
       );
-    }, 2000); // Adjust delay as needed (2 seconds here)
+      setMessages(res.data); // Always update to keep it live
+    } catch (error) {
+      console.error("Failed to fetch messages:", error);
+    }
+  }, [selectedEmployee]);
+
+  useEffect(() => {
+    if (!selectedEmployee) return;
+
+    fetchMessages(); // Initial
+
+    if (pollingRef.current) clearInterval(pollingRef.current);
+    pollingRef.current = setInterval(() => {
+      fetchMessages(); // Will use latest version
+    }, 2000);
+
+    return () => {
+      if (pollingRef.current) {
+        clearInterval(pollingRef.current);
+        pollingRef.current = null;
+      }
+    };
+  }, [fetchMessages, selectedEmployee]);
+
+
+  const handleSendMessage = async () => {
+  if (!selectedEmployee || newMessage.trim() === "") return;
+
+  const messageToSend: Message = {
+    id: Date.now(),
+    senderId: 0, // Can be set to real HR ID
+    receiverId: selectedEmployee.id,
+    content: newMessage,
+    timestamp: new Date().toLocaleString("sv-SE", { timeZone: "Asia/Riyadh" }).replace(" ", "T"),
+    senderRole: "HR",
   };
 
-  const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (file) {
-      const timestamp = new Date().toLocaleString();
-      setMessages([
-        ...messages,
-        {
-          text: `📎 Attached file: ${file.name}`,
-          type: "sent",
-          timestamp,
-        },
-      ]);
-    }
-  };
+  try {
+    await axios.post(
+      "http://localhost:5122/api/chat/hr-send",
+      { content: newMessage, receiverId: selectedEmployee.id },
+      { withCredentials: true }
+    );
+
+    setMessages((prev) => [...prev, messageToSend]);
+    setNewMessage("");
+    setShowEmojiPicker(false);
+  } catch (error) {
+    console.error("Send message failed:", error);
+  }
+};
+
 
   const handleEmojiClick = (emojiData: EmojiClickData) => {
-    setNewMessage(newMessage + emojiData.emoji);
-  };
-
-  const toggleTheme = () => {
-    const newTheme = theme === "light" ? "dark" : "light";
-    setTheme(newTheme);
-    document.documentElement.setAttribute("data-theme", newTheme);
+    setNewMessage((prev) => prev + emojiData.emoji);
   };
 
   return (
-    <div className="chat-container">
-      {/* Header */}
-      <div className="chat-header">
-        <h4>Chat with HR</h4>
-        <button onClick={toggleTheme} className="theme-toggle-button">
-          {theme === "light" ? "🌙 Dark Mode" : "☀️ Light Mode"}
-        </button>
+  <div className="chat-wrapper" style={{ display: "flex", height: "100vh" }}>
+    <div className="chat-container" style={{ flex: 3, display: "flex", flexDirection: "column" }}>
+      <div className="chat-header" style={{ padding: "10px", borderBottom: "1px solid #ccc" }}>
+        <h4>Chat with {selectedEmployee?.fullName || "..."}</h4>
       </div>
 
-      {/* Message List */}
-      <div ref={messageListRef} className="message-list">
-        {messages.map((message, index) => (
-          <div key={index} className={`message ${message.type}`}>
-            {message.text}
-            <span className="timestamp">{message.timestamp}</span>
+      <div
+        className="message-list"
+        ref={messageListRef}
+        style={{ flexGrow: 1, overflowY: "auto", padding: 10 }}
+      >
+        {messages.map((msg) => (
+          <div
+            key={msg.id}
+            className={`message ${msg.senderRole === "HR" ? "sent" : "received"}`}
+          >
+            {msg.content}
+            <span className="timestamp">
+              {new Date(msg.timestamp.replace(" ", "T")).toLocaleTimeString("en-US", {
+                  timeZone: "Asia/Riyadh",
+                  hour: "2-digit",
+                  minute: "2-digit",
+            })}
+          </span>
           </div>
         ))}
       </div>
 
-      {/* Emoji Picker */}
-      {showEmojiPicker && <EmojiPicker onEmojiClick={handleEmojiClick} />}
-
-      {/* Message Input */}
-      <div className="message-input">
+      <div
+        className="message-input"
+        style={{ display: "flex", padding: 10, borderTop: "1px solid #ccc", gap: 8 }}
+      >
         <input
           type="text"
+          placeholder="Type your message here..."
           value={newMessage}
           onChange={(e) => setNewMessage(e.target.value)}
-          placeholder="Type your message here..."
-          onKeyDown={(e) => {
-            if (e.key === "Enter") {
-              handleSendMessage();
-            }
-          }}
+          onKeyDown={(e) => e.key === "Enter" && handleSendMessage()}
+          style={{ flex: 1, padding: "8px", borderRadius: 4, border: "1px solid #ccc" }}
         />
-        <label className="attach-button">
-          📎
-          <input
-            type="file"
-            style={{ display: "none" }}
-            onChange={handleFileUpload}
-          />
-        </label>
-        <button onClick={() => setShowEmojiPicker(!showEmojiPicker)}>😀</button>
+        <button onClick={() => setShowEmojiPicker((prev) => !prev)}>😀</button>
         <button onClick={handleSendMessage}>Send</button>
       </div>
+
+      {showEmojiPicker && (
+        <div style={{ position: "absolute", bottom: 70, left: 10 }}>
+          <EmojiPicker onEmojiClick={handleEmojiClick} />
+        </div>
+      )}
     </div>
-  );
+
+    {/* Updated Sidebar */}
+    <div className="employee-sidebar">
+      <input
+        type="text"
+        placeholder="Search employees..."
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+      />
+      <ul className="employee-list">
+  {employees.map((emp) => (
+    <li
+      key={emp.id}
+      className={`employee-item ${selectedEmployee?.id === emp.id ? "selected" : ""}`}
+      onClick={() => setSelectedEmployee(emp)}
+      style={{
+        display: "flex",
+        alignItems: "center",
+        gap: "10px",
+        padding: "8px",
+        cursor: "pointer",
+        borderBottom: "1px solid #eee",
+      }}
+    >
+      <img
+        src={
+          emp.profilePictureUrl
+            ? `http://localhost:5122${emp.profilePictureUrl}`
+            : "/default-profile.png"
+        }
+        alt={emp.fullName}
+        style={{ width: "40px", height: "40px", borderRadius: "50%", objectFit: "cover" }}
+      />
+      <div>
+        <div style={{ fontWeight: "bold" }}>{emp.fullName}</div>
+        <div style={{ fontSize: "0.85rem", color: "#555" }}>{emp.position}</div>
+      </div>
+    </li>
+  ))}
+</ul>
+    </div>
+  </div>
+);
 };
 
-export default ChatComponent;
+export default HRChat;

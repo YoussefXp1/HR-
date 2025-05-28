@@ -175,5 +175,20 @@ h3 {
   cursor: pointer;
   font-size: 18px;
   color: #333;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  box-shadow: none;
 }
+
+/* Remove focus styles completely */
+.eye-button:focus,
+.eye-button:active {
+  outline: none !important;
+  box-shadow: none !important;
+  background: none !important;
+}
+
+
+
 

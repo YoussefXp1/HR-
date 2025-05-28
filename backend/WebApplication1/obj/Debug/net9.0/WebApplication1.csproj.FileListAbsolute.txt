@@ -335,3 +335,5 @@ C:\Users\Youssef\Hr Horizon\backend\WebApplication1\bin\Debug\net9.0\BouncyCastl
 C:\Users\Youssef\Hr Horizon\backend\WebApplication1\bin\Debug\net9.0\MailKit.dll
 C:\Users\Youssef\Hr Horizon\backend\WebApplication1\bin\Debug\net9.0\MimeKit.dll
 C:\Users\Youssef\Hr Horizon\backend\WebApplication1\obj\Debug\net9.0\WebApplication1.sourcelink.json
+C:\Users\Youssef\Hr Horizon\backend\WebApplication1\bin\Debug\net9.0\WebApplication1.staticwebassets.runtime.json
+C:\Users\Youssef\Hr Horizon\backend\WebApplication1\bin\Debug\net9.0\System.Net.WebSockets.WebSocketProtocol.dll

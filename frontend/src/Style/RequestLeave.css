@@ -1,87 +1,63 @@
-/* RequestLeave.css */
+.request-leave-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
 
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
-    padding: 20px;
-  }
-  
-  .card {
-    width: 100%;
-    max-width: 420px;
-    padding: 25px;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  }
-  
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-  }
-  
-  .title {
-    text-align: center;
-    font-size: 1.6rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
-  .form {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-  
-  .label {
-    font-size: 0.95rem;
-    font-weight: 500;
-    color: #444;
-  }
-  
-  .input, textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 1rem;
-    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  }
-  
-  .input:focus,
-  textarea:focus {
-    border-color: #3b82f6;
-    box-shadow: 0 0 5px rgba(59, 130, 246, 0.3);
-    outline: none;
-  }
-  
-  textarea {
-    min-height: 80px;
-    resize: vertical;
-  }
-  
-  .button {
-    padding: 12px;
-    background: #3b82f6;
-    color: white;
-    font-size: 1rem;
-    font-weight: bold;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background 0.3s, transform 0.2s ease-in-out;
-  }
-  
-  .button:hover {
-    background: #2563eb;
-    transform: scale(1.05);
-  }
-  
-  .button:active {
-    transform: scale(0.98);
-  }
-  
+.request-leave-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333333;
+}
+
+.request-leave-container select,
+.request-leave-container input,
+.request-leave-container textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.request-leave-container select:focus,
+.request-leave-container input:focus,
+.request-leave-container textarea:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+.request-leave-container textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.request-leave-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4a90e2;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.request-leave-container button:hover {
+  background-color: #357ab7;
+}
+
+.request-leave-container p {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #28a745; /* green for success, change to red for error */
+}

@@ -7,10 +7,11 @@ import Image from "../assets/Hr-Image.png";
 const HrProfile: React.FC = () => {
   const [isEditingName, setIsEditingName] = useState(false);
   const [isEditingPhone, setIsEditingPhone] = useState(false);
-
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
+  const [phoneError, setPhoneError] = useState("");
+  const [updateMessage, setUpdateMessage] = useState("");
   const [hrId, setHrId] = useState<number | null>(null);
   const [position, setPosition] = useState("HR Manager");
   const navigate = useNavigate();
@@ -45,23 +46,40 @@ const HrProfile: React.FC = () => {
 
   const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFullName(e.target.value);
+    setUpdateMessage("");
   };
 
   const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setPhoneNumber(e.target.value);
+    const value = e.target.value;
+    if (/^\d*$/.test(value)) {
+      setPhoneNumber(value);
+      setUpdateMessage("");
+      if (value.length !== 10 && value.length > 0) {
+        setPhoneError("Phone number must be exactly 10 digits.");
+      } else {
+        setPhoneError("");
+      }
+    }
   };
 
   const toggleEditName = () => {
     setIsEditingName((prev) => !prev);
+    setUpdateMessage("");
   };
 
   const toggleEditPhone = () => {
     setIsEditingPhone((prev) => !prev);
+    setUpdateMessage("");
   };
 
   const handleSaveChanges = async () => {
     if (!hrId) {
-      alert("HR ID not found!");
+      setUpdateMessage("HR ID not found!");
+      return;
+    }
+
+    if (phoneNumber.length !== 10) {
+      setPhoneError("Phone number must be exactly 10 digits.");
       return;
     }
 
@@ -85,11 +103,12 @@ const HrProfile: React.FC = () => {
         throw new Error("Failed to update profile.");
       }
 
-      alert("Profile updated successfully!");
+      setUpdateMessage("Profile updated successfully!");
       setIsEditingName(false);
       setIsEditingPhone(false);
     } catch (error) {
       console.error("Error updating profile:", error);
+      setUpdateMessage("Failed to update profile.");
     }
   };
 
@@ -98,6 +117,11 @@ const HrProfile: React.FC = () => {
       <div className="profile-picture">
         <img src={Image} alt="HR Profile" />
         <p className="hr-id">ID: {hrId !== null ? hrId : "Loading.."}</p>
+        {updateMessage && (
+          <p style={{ color: updateMessage.includes("success") ? "green" : "red", marginTop: "5px" }}>
+            {updateMessage}
+          </p>
+        )}
       </div>
 
       {/* Full Name Section */}
@@ -139,6 +163,9 @@ const HrProfile: React.FC = () => {
           disabled={!isEditingPhone}
           className={`name-input ${isEditingPhone ? "editable" : ""}`}
         />
+        {phoneError && (
+          <p style={{ color: "red", marginTop: "5px" }}>{phoneError}</p>
+        )}
       </div>
 
       {/* Position Section */}

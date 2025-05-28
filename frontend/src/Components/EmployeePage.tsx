@@ -10,7 +10,8 @@ import ViewLeaderboard from "./ViewLeaderboard";
 import ViewSalary from "./ViewSalary";
 import Chat from "./Chat";
 import RequestLeave from "./RequestLeave";
-
+import EmployeeCalendar from "./EmployeeCalendar";
+import EmployeeChatComponent from "./EmployeeChat";
 
 
 const EmployeePage: React.FC = () => {
@@ -26,11 +27,11 @@ const EmployeePage: React.FC = () => {
           <Route path="upload-documents" element={<UploadDocuments />} />
           <Route path="view-events" element={<ViewEvents />} />
           <Route path="clock-in-out" element={<ClockInOut />} />
-          <Route path="view-attendance" element={<ViewAttendance />} />
+          <Route path="my-attendance" element={<EmployeeCalendar />} />
           <Route path="request-leave-vacation" element={<RequestLeave />} />
           <Route path="view-leaderboard" element={<ViewLeaderboard />} />
-          <Route path="view-salary" element={<ViewSalary />} />
-          <Route path="chat" element={<Chat />} />
+         { /*<Route path="view-salary" element={<ViewSalary />} />*/}
+          <Route path="chat" element={<EmployeeChatComponent />} />
 
 
           
